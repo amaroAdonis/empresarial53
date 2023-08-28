@@ -7,15 +7,17 @@ public class Manutencao {
     private Double valor;
     private Integer numeroSala;
     private Date dataServico;
+    private Integer orderNum;
 
     public Manutencao() {
     }
 
-    public Manutencao(String nomeServico, Double valor, Integer numeroSala, Date dataServico) {
+    public Manutencao(String nomeServico, Double valor, Integer numeroSala, Date dataServico, Integer orderNum) {
         this.nomeServico = nomeServico;
         this.valor = valor;
         this.numeroSala = numeroSala;
         this.dataServico = dataServico;
+        this.orderNum = orderNum;
     }
 
     public String getNomeServico() {
@@ -48,5 +50,13 @@ public class Manutencao {
 
     public void setDataServico(Date dataServico) {
         this.dataServico = dataServico;
+    }
+
+    public Integer getOrderNum() {
+        return orderNum;
+    }
+
+    public void setOrderNum(Integer orderNum) {
+        this.orderNum = orderNum;
     }
 }

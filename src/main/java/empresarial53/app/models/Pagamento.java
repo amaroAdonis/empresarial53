@@ -8,16 +8,18 @@ public class Pagamento {
     private String formaPagamento;
     private Double valor;
     private String observacao;
+    private Integer orderNum;
 
     public Pagamento() {
     }
 
-    public Pagamento(Integer numeroSala, Date diaPagamento, String formaPagamento, Double valor, String observacao) {
+    public Pagamento(Integer numeroSala, Date diaPagamento, String formaPagamento, Double valor, String observacao, Integer orderNum) {
         this.numeroSala = numeroSala;
         this.diaPagamento = diaPagamento;
         this.formaPagamento = formaPagamento;
         this.valor = valor;
         this.observacao = observacao;
+        this.orderNum = orderNum;
     }
 
     public Integer getNumeroSala() {
@@ -58,5 +60,13 @@ public class Pagamento {
 
     public void setObservacao(String observacao) {
         this.observacao = observacao;
+    }
+
+    public Integer getOrderNum() {
+        return orderNum;
+    }
+
+    public void setOrderNum(Integer orderNum) {
+        this.orderNum = orderNum;
     }
 }
