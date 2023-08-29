@@ -20,6 +20,7 @@ public class UserDao {
             user.setUserName(resultSet.getString("username"));
             user.setEmail(resultSet.getString("email"));
             user.setPassword(resultSet.getString("password"));
+            user.setOrder(resultSet.getInt("order"));
 
             return user;
     }
@@ -39,14 +40,19 @@ public class UserDao {
         return jdbcTemplate.queryForObject(sql, this::getUserFromResultSet, email);
     }
 
-    public void deleteByEmail(String email) {
-        String sql = "DELETE FROM user_admin WHERE email = ?";
-        jdbcTemplate.update(sql, email);
+    public void deleteByOrder(Integer order) {
+        String sql = "DELETE FROM user_admin WHERE orderNum = ?";
+        jdbcTemplate.update(sql, order);
     }
 
     public void update(User user) {
-        String sql = "UPDATE user_admin SET username = ?, password = ? WHERE email = ?";
-        jdbcTemplate.update(sql, user.getUserName(), user.getPassword(), user.getEmail());
+        String sql = "UPDATE user_admin SET username = ?, password = ? WHERE orderNum = ?";
+        jdbcTemplate.update(sql, user.getUserName(), user.getPassword(), user.getOrder());
+    }
+
+    public User getUserByEmail(String email) {
+        String sql = "SELECT * FROM user_admin WHERE email = ?";
+        return jdbcTemplate.queryForObject(sql, this::getUserFromResultSet, email);
     }
 
     public String getAuthorityByEmail(String email) {
