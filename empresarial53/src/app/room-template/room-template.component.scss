@@ -1,0 +1,195 @@
+:host {
+    .container{
+        margin: 30px 0 0 0;
+        padding: 0 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .short-info{
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            
+            .locatario-nome{
+                text-align: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 25px;
+                color: #58585858;
+                padding: 0;
+                margin: 0 0 -8px 0;
+                border: 0;
+            }
+            .sala-info{
+                font-style: italic;
+                font-size: 14px;
+            }
+        }
+        .divisor{
+            width: 320px;
+            align-self: center;
+            hr{
+               margin: 0;
+            }
+        }
+        .long-info{
+            font-size: 13px;
+            display: flex;
+            flex-direction: row;
+            width: 320px;
+            margin-top: 10px;
+            align-self: center;
+            .right-info{
+                flex-direction: column;
+                width: 150px;
+                .title{
+                    margin: 0;
+                    font-weight: 500;
+                }
+                .answer{
+                    margin: 0;
+                    color: gray;
+                    text-align: right;
+                    margin-bottom: 5px;
+                }
+            }
+            .left-info{
+                width: 150px;
+                margin-left: 20px;
+                flex-direction: column;
+                .title{
+                    margin: 0;
+                    font-weight: 500;
+                }
+                .answer{
+                    margin: 0;
+                    color: gray;
+                    text-align: left;
+                    margin-bottom: 5px;
+                }
+                .alertbox1{
+                    margin: 20px 0 0 0;
+                    font-weight: 500;
+                    text-align: center;
+                    background-color: cadetblue;
+                    border-radius: 7px;
+                }
+                .alertbox2{
+                    margin: 15px 0 0 0;
+                    font-weight: 500;
+                    text-align: center;
+                    background-color: rgb(255, 26, 83);
+                    border-radius: 7px;
+                    div{
+                        flex-direction: row;
+                    }
+                }
+                .date{
+                    font-size: 18px;
+                    padding: 5px 0 5px 0;
+                    margin-bottom: 0;
+                    color: aliceblue;
+                }
+                .text{
+                    margin-bottom: 0;
+                    padding: 5px 0 5px 0;
+                }
+            }
+        }
+        .calendar-pay-status{
+            flex-direction: column;
+            text-align: center;
+            align-self: center;
+            .title{
+                font-size: 15px;
+                font-weight: 500;
+                margin: 10px 0 0 0;
+            }
+            table{
+                width: 320px;
+                border: solid black 1px;
+                text-align: center;
+                justify-content: center;
+              
+                tr{
+                    border: solid black 1px;
+                    height: 35px;
+                    td{
+                        border: solid black 1px;
+                        font-weight: 500;
+                        font-size: small;
+                        width: 53.33px;
+                    }
+                }
+            }
+        }
+        .last-repairs{
+            flex-direction: column;
+            text-align: center;
+            align-self: center;
+            .title{
+                font-size: 15px;
+                font-weight: 500;
+                margin: 10px 0 0 0;
+            }
+            table{
+                width: 320px;
+                border: solid black 1px;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                tr{
+                    border: solid black 1px;
+                    height: 30px;
+                    th{
+                        border: solid black 1px;
+                    }
+                    td{
+                        border: solid black 1px;
+                        font-size: 13px;
+                    }
+                    .first-row{
+                        text-align: left;
+                    }
+                } 
+            }
+            .link{
+                margin: 0;
+                text-align: right;
+                a{
+                    font-size: 13px;
+                }
+            }
+        }
+        .buttons{
+            margin: 10px 0 10px 0;
+            align-self: center;
+            .pay-info{
+                background-color: darkgreen;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                height: 35px;
+                width: 165px;
+                font-weight: 600;
+            }
+            .contact{
+                background-color: darkcyan;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                margin-left: 10px;
+                height: 35px;
+                width: 145px;
+                font-weight: 600;
+            }
+        }
+        .clean-room{
+            text-align: center;
+            font-size: 15px;
+            a{
+                color: red;
+            }
+        }
+    }
+}
