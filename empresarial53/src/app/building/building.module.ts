@@ -1,22 +1,21 @@
 import { NgModule } from "@angular/core";
-import { NewRepairComponent } from "./new-repair.component";
+import { BuildingComponent } from "./building.component";
 import { CommonModule } from "@angular/common";
+import { BuildingRoutingModule } from "./building-routing.module";
 import { RouterModule } from "@angular/router";
-import { NewRepairRouting } from "./new-repair-routing.module";
 import { DropdownModule } from "../dropdown/dropdown.module";
+
 
 @NgModule({
     declarations: [
-        NewRepairComponent
+        BuildingComponent
     ],
     imports: [
         CommonModule,
+        BuildingRoutingModule,
         RouterModule,
         DropdownModule
     ],
-    exports: [
-        RouterModule,
-        NewRepairRouting
-    ]
+    exports: [RouterModule]
 })
-export class NewRepairModule {}
+export class BuildingModule {}

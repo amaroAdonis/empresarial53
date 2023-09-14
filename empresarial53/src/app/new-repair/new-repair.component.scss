@@ -5,6 +5,14 @@
         display: flex;
         flex-direction: column;
         width: 320px;
+        height: 100vh;
+        .dropdown{
+            margin-bottom: 20px;
+            margin-top: 20px;
+            display: flex;
+            width: 320px;
+            align-self: center;
+        }
         .new-payment-title{
             width: 320px;
             align-self: center;

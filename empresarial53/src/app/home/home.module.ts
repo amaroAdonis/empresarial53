@@ -4,6 +4,7 @@ import { CommonModule } from "@angular/common";
 import { HomeRoutingModule } from "./home-routing.module";
 import { HeaderTemplateModule } from "../header-template/header-template.module";
 import { RouterModule } from "@angular/router";
+import { DropdownModule } from "../dropdown/dropdown.module";
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { RouterModule } from "@angular/router";
     imports: [
         CommonModule,
         HomeRoutingModule,
-        HeaderTemplateModule
+        HeaderTemplateModule,
+        DropdownModule
     ],
     exports: [RouterModule]
 })

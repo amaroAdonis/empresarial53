@@ -1,20 +1,20 @@
 import { NgModule } from "@angular/core";
-import { CreateRoomComponent } from "./create-room.component";
+import { LoginComponent } from "./login.component";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
-import { CreateRoomRouting } from "./create-room-routing.module";
+import { LoginRouting } from "./login-routing.module";
 
 @NgModule({
     declarations: [
-        CreateRoomComponent
+        LoginComponent
     ],
     imports: [
         CommonModule,
-        RouterModule
+        RouterModule,
     ],
     exports: [
         RouterModule,
-        CreateRoomRouting
+        LoginRouting
     ]
 })
-export class CreateRoomModule {}
+export class LoginModule {}

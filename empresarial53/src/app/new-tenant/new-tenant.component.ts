@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-create-room',
-  templateUrl: './create-room.component.html',
-  styleUrls: ['./create-room.component.scss']
+  selector: 'app-new-tenant',
+  templateUrl: './new-tenant.component.html',
+  styleUrls: ['./new-tenant.component.scss']
 })
-export class CreateRoomComponent implements OnInit {
+export class NewTenantComponent implements OnInit {
 
   
   

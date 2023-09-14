@@ -14,7 +14,6 @@ import { DropdownModule } from "../dropdown/dropdown.module";
     imports: [
         CommonModule,
         RouterModule,
-        DropdownModule
         
     ],
     exports: [

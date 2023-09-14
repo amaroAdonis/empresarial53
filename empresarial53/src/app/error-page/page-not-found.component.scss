@@ -1,0 +1,22 @@
+:host{
+    
+        box-sizing: border-box;
+    .container{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        h1{
+            color: #ff2727;
+        }
+    
+        a{
+            text-align: center;
+        }
+
+    }
+    
+
+}

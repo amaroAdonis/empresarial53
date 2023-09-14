@@ -8,8 +8,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserProfileService {
 
-    @Autowired
     private UserDao userdao;
+
+    @Autowired
+    public UserProfileService(UserDao userdao) {
+        this.userdao = userdao;
+    }
 
     public UserProfile getUserProfile(String email) {
 

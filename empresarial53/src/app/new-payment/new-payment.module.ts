@@ -3,6 +3,7 @@ import { NewPaymentComponent } from "./new-payment.component";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { NewPaymentRouting } from "./new-payment-routing.module";
+import { DropdownModule } from "../dropdown/dropdown.module";
 
 @NgModule({
     declarations: [
@@ -10,7 +11,8 @@ import { NewPaymentRouting } from "./new-payment-routing.module";
     ],
     imports: [
         CommonModule,
-        RouterModule
+        RouterModule,
+        DropdownModule
     ],
     exports: [
         RouterModule,

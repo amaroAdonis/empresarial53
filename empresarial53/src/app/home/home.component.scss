@@ -1,14 +1,25 @@
 ;:host{
     .container{
+
+        
         display: flex;
         flex-direction: column;    
         margin-top: 30px;
         width: 320px;
+        height: 100vh;
+
+        .dropdown{
+            margin-bottom: 20px;
+            margin-top: 20px;
+            display: flex;
+            width: 320px;
+            align-self: center;
+        }
         .building{
             align-self: center;
             button{
                 color: white;
-                background-color: #de253d;
+                background-color: #000000b4;
                 border-radius: 5px;
                 width: 290px;
                 height: 50px;
