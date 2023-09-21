@@ -2,8 +2,8 @@
     <div class="dropdown">
         <dropdown-basic></dropdown-basic>
     </div>
-    <div class="new-payment-title">
-        <p>NOVO PAGAMENTO</p>
+    <div class="repair-title">
+        <p>NOVA MANUTENÇÃO</p>
     </div>
     <div class="divisor">
         <hr/>
@@ -37,6 +37,10 @@
             </div>
         </div>
         <div class="inputs">
+            <label class="label">Manutenção</label>
+            <input formControlName="manutencao" type="text" class="manutencao" placeholder="Nome da manutenção">
+        </div>
+        <div class="inputs">
             <label class="label">Data do Pagamento</label>
             <input formControlName="diaPagamento" type="date" name="diaPagamento">
         </div>
@@ -44,32 +48,10 @@
             <label class="label">Valor(R$)</label>
             <input formControlName="valor" type="number" class="valor" placeholder="Valor do Pago">
         </div>
-        <div class="inputs">
-            <label class="label">Observação</label>
-            <input formControlName="observacao" type="text" class="observacao">
-        </div>
-        <div class="inputs">
-            <label class="label">Forma de pagamento</label>
-        <div class="form">
-            <div class="row">
-                <div class="col">
-                        <select formControlName="pay-way" class="items"> 
-                            <option>Escolha uma forma</option>
-                            <option>Em espécie</option>
-                            <option>Pix</option>
-                            <option>Transferência bancária</option>
-                            <option>Boleto</option>
-                            <option>Cheque</option>
-                            <option>Outros</option>
-                        </select>
-                </div>
-            </div>
-        </div>
-        </div>
+        
     </div>
     <div class="buttons">
         <button class="left">Salvar pagamento</button>
         <button class="right">Cancelar</button>
     </div>
-
 </div>

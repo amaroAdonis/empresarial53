@@ -24,16 +24,16 @@ const routes: Routes = [
         loadChildren: () => import("./room-template/room-template.module").then(m => m.RoomTemplateModule)
       },
       {
-        path:"locatario-novo",
-        loadChildren: () => import("./new-tenant/new-tenant.module").then(m => m.NewTenantModule)
+        path:"locatario",
+        loadChildren: () => import("./tenant/tenant.module").then(m => m.TenantModule)
       },
       {
         path:"pagamento",
-        loadChildren: () => import("./new-payment/new-payment.module").then(m => m.NewPaymentModule)
+        loadChildren: () => import("./payment/payment.module").then(m => m.PaymentModule)
       },
       {
         path:"manutencao",
-        loadChildren: () => import("./new-repair/new-repair.module").then(m => m.NewRepairModule)
+        loadChildren: () => import("./repair/repair.module").then(m => m.RepairModule)
       },
       {
         path:"login",
@@ -42,6 +42,10 @@ const routes: Routes = [
       {
         path:"empresarial53",
         loadChildren: () => import("./building/building.module").then(m => m.BuildingModule)
+      },
+      {
+        path:"novo-contrato",
+        loadChildren: () => import("./contract-generator/contract-generator.module").then(m => m.ContractGeneratorModule)
       }
     ]
 

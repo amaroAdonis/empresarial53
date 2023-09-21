@@ -1,9 +1,9 @@
-<div class="container">
+<div [formGroup]="form" class="container">
     <div class="dropdown">
         <dropdown-basic></dropdown-basic>
     </div>
     <div class="new-room-title">
-        <p>NOVO LOCATÁRIO</p>
+        <p>{{title}}</p>
     </div>
     <div class="divisor">
         <hr/>
@@ -51,6 +51,10 @@
         <div class="inputs">
             <label class="label">Fim do Contrato</label>
             <input formControlName="fimContrato" type="date" name="fimContrato">
+        </div>
+        <div class="inputs">
+            <label class="label">Valor do Contrato</label>
+            <input formControlName="valorContrato" type="number" name="valorContrato">
         </div>
         <div class="inputs">
             <label class="label">Dia do vencimento</label>
@@ -110,7 +114,7 @@
     </div>
     <div class="buttons">
 
-        <button class="left">Salvar nova sala</button>
+        <button (click)="submit()" class="left">Salvar nova sala</button>
         <button class="right">Cancelar</button>
         
     </div>

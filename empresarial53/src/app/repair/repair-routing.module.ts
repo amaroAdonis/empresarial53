@@ -1,11 +1,11 @@
 import { RouterModule, Routes } from "@angular/router";
-import { NewRepairComponent } from "./new-repair.component";
+import { RepairComponent } from "./repair.component";
 import { NgModule } from "@angular/core";
 
 const routes: Routes = [
     {
         path: "",
-        component: NewRepairComponent
+        component: RepairComponent
     }
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class NewRepairRouting {}
+export class RepairRouting {}

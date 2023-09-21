@@ -1,17 +1,16 @@
 import { RouterModule, Routes } from "@angular/router";
-import { NewTenantComponent } from "./new-tenant.component";
+import { ContractGeneratorComponent } from "./contract-generator.component";
 import { NgModule } from "@angular/core";
 
 const routes: Routes = [
     {
         path:"",
-        component: NewTenantComponent
+        component: ContractGeneratorComponent
     }
 ];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
-
 })
-export class NewTenantRouting {}
+export class ContractGeneratorRouting {}

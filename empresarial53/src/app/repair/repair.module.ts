@@ -1,13 +1,13 @@
 import { NgModule } from "@angular/core";
-import { NewRepairComponent } from "./new-repair.component";
+import { RepairComponent } from "./repair.component";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
-import { NewRepairRouting } from "./new-repair-routing.module";
+import { RepairRouting } from "./repair-routing.module";
 import { DropdownModule } from "../dropdown/dropdown.module";
 
 @NgModule({
     declarations: [
-        NewRepairComponent
+        RepairComponent
     ],
     imports: [
         CommonModule,
@@ -16,7 +16,7 @@ import { DropdownModule } from "../dropdown/dropdown.module";
     ],
     exports: [
         RouterModule,
-        NewRepairRouting
+        RepairRouting
     ]
 })
-export class NewRepairModule {}
+export class RepairModule {}

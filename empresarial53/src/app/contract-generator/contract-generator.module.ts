@@ -1,13 +1,13 @@
 import { NgModule } from "@angular/core";
-import { NewTenantComponent } from "./new-tenant.component";
+import { ContractGeneratorComponent } from "./contract-generator.component";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
-import { NewTenantRouting } from "./new-tenant-routing.module";
 import { DropdownModule } from "../dropdown/dropdown.module";
+import { ContractGeneratorRouting } from "./contract-generator-routing.module";
 
 @NgModule({
     declarations: [
-        NewTenantComponent
+        ContractGeneratorComponent
     ],
     imports: [
         CommonModule,
@@ -16,7 +16,7 @@ import { DropdownModule } from "../dropdown/dropdown.module";
     ],
     exports: [
         RouterModule,
-        NewTenantRouting
+        ContractGeneratorRouting
     ]
 })
-export class NewTenantModule {}
+export class ContractGeneratorModule {}

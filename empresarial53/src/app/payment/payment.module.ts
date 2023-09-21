@@ -1,13 +1,13 @@
 import { NgModule } from "@angular/core";
-import { NewPaymentComponent } from "./new-payment.component";
+import { PaymentComponent } from "./payment.component";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
-import { NewPaymentRouting } from "./new-payment-routing.module";
+import { PaymentRouting } from "./payment-routing.module";
 import { DropdownModule } from "../dropdown/dropdown.module";
 
 @NgModule({
     declarations: [
-        NewPaymentComponent
+        PaymentComponent
     ],
     imports: [
         CommonModule,
@@ -16,7 +16,7 @@ import { DropdownModule } from "../dropdown/dropdown.module";
     ],
     exports: [
         RouterModule,
-        NewPaymentRouting
+        PaymentRouting
     ]
 })
-export class NewPaymentModule {}
+export class PaymentModule {}

@@ -13,7 +13,7 @@
             width: 320px;
             align-self: center;
         }
-        .new-payment-title{
+        .payment-title{
             width: 320px;
             align-self: center;
             p{
@@ -57,6 +57,9 @@
             .inputs{
                 display: flex;
                 flex-direction: column;
+            }
+            .observacao{
+                height: 80px;
             }
         }
         .buttons{

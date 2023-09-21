@@ -19,15 +19,14 @@ public class UserDao {
             User user = new User();
             user.setUserName(resultSet.getString("username"));
             user.setEmail(resultSet.getString("email"));
-            user.setPassword(resultSet.getString("password"));
             user.setOrder(resultSet.getInt("order"));
 
             return user;
     }
 
     public void newUser(User user) {
-        String sql = "INSERT INTO user_admin(username, email, password) values(?, ?, ?)";
-        jdbcTemplate.update(sql, user.getUserName(), user.getEmail(), user.getPassword());
+        String sql = "INSERT INTO user_admin(username, email) values(?, ?, ?)";
+        jdbcTemplate.update(sql, user.getUserName(), user.getEmail());
     }
 
     public List<User> findAll() {
@@ -47,7 +46,7 @@ public class UserDao {
 
     public void update(User user) {
         String sql = "UPDATE user_admin SET username = ?, password = ? WHERE orderNum = ?";
-        jdbcTemplate.update(sql, user.getUserName(), user.getPassword(), user.getOrder());
+        jdbcTemplate.update(sql, user.getUserName(), user.getOrder());
     }
 
     public User getUserByEmail(String email) {
