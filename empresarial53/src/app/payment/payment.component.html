@@ -1,9 +1,9 @@
-<div class="container">
+<div [formGroup]="form" class="container">
     <div class="dropdown">
         <dropdown-basic></dropdown-basic>
     </div>
     <div class="payment-title">
-        <p>NOVO PAGAMENTO</p>
+        <p>{{title}}</p>
     </div>
     <div class="divisor">
         <hr/>
@@ -13,7 +13,7 @@
         <div class="form">
             <div class="row">
                 <div class="col">
-                        <select formControlName="roomNumber" class="items"> 
+                        <select formControlName="numeroSala" class="items"> 
                             <option>Escolha uma sala</option>
                             <option>01</option>
                             <option>02</option>
@@ -53,7 +53,7 @@
         <div class="form">
             <div class="row">
                 <div class="col">
-                        <select formControlName="pay-way" class="items"> 
+                        <select formControlName="formaPagamento" class="items"> 
                             <option>Escolha uma forma</option>
                             <option>Em espécie</option>
                             <option>Pix</option>

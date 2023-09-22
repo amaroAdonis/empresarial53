@@ -16,7 +16,7 @@ export class TenantComponent implements OnInit {
   
   constructor(
     private activatedRoute:ActivatedRoute,
-    private screenStrategy:ScreenStrategy
+    private screenStrategy:ScreenStrategy,
     ){}
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.paramMap.get("cpfCnpj") ?? undefined;
@@ -41,6 +41,7 @@ export class TenantComponent implements OnInit {
     email: new FormControl(null, [Validators.required]),
     telefone: new FormControl(null, [Validators.required]),
     whatsapp: new FormControl(null, [Validators.required]),
+    numeroContrato: new FormControl(null, [Validators.required])
   })
 
   public submit():void {

@@ -20,7 +20,7 @@ const routes: Routes = [
         loadChildren: () => import("./home/home.module").then(m => m.HomeModule)
       },
       {
-        path:"sala/:id",
+        path:"sala",
         loadChildren: () => import("./room-template/room-template.module").then(m => m.RoomTemplateModule)
       },
       {
@@ -46,6 +46,18 @@ const routes: Routes = [
       {
         path:"novo-contrato",
         loadChildren: () => import("./contract-generator/contract-generator.module").then(m => m.ContractGeneratorModule)
+      },
+      {
+        path:"lista-locatarios",
+        loadChildren: () => import("./tenants-list/tenants-list.module").then(m => m.TenantsListModule)
+      },
+      {
+        path:"lista-pagamentos",
+        loadChildren: () => import("./payments-list/payments-list.module").then(m => m.PaymentsListModule)
+      },
+      {
+        path:"lista-manutencoes",
+        loadChildren: () => import("./repairs-list/repairs-list.module").then(m => m.RepairsListModule)
       }
     ]
 

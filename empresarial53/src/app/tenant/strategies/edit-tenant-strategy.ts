@@ -7,10 +7,9 @@ import { firstValueFrom } from "rxjs";
 @Injectable()
 export class EditTenantStrategy implements ScreenStrategy{
 
-    constructor(private http:HttpClient){
-    }
+    constructor(private http:HttpClient){}
     
-    loadTenant(cpfCnpj?: string | undefined): Promise<Tenant> {
+    loadTenant(cpfCnpj?: string): Promise<Tenant> {
         const observable = this.http.get<Tenant>(`api/locatario/${cpfCnpj}`);
         return firstValueFrom(observable);
     }
@@ -21,7 +20,4 @@ export class EditTenantStrategy implements ScreenStrategy{
     getTitle(): string {
         return "Editando o locatário";
     }
-
-    
-
 }

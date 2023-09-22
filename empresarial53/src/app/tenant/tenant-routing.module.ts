@@ -8,7 +8,7 @@ const routes: Routes = [
         path:"",
         component: LoadNewTenantComponent,
     }, {
-        path:":id",
+        path:":cpfCnpj",
         component: LoadEditTenantComponent,
     }
 ];

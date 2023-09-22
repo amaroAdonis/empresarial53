@@ -1,4 +1,4 @@
-<div class="container">
+<div [formGroup]="form" class="container">
     <div class="dropdown">
         <dropdown-basic></dropdown-basic>
     </div>
@@ -13,7 +13,7 @@
         <div class="form">
             <div class="row">
                 <div class="col">
-                        <select formControlName="roomNumber" class="items"> 
+                        <select formControlName="numeroSala" class="items"> 
                             <option>Escolha uma sala</option>
                             <option>01</option>
                             <option>02</option>
@@ -38,11 +38,11 @@
         </div>
         <div class="inputs">
             <label class="label">Manutenção</label>
-            <input formControlName="manutencao" type="text" class="manutencao" placeholder="Nome da manutenção">
+            <input formControlName="nomeServico" type="text" class="manutencao" placeholder="Nome da manutenção">
         </div>
         <div class="inputs">
-            <label class="label">Data do Pagamento</label>
-            <input formControlName="diaPagamento" type="date" name="diaPagamento">
+            <label class="label">Data do Serviço</label>
+            <input formControlName="dataServico" type="date" name="diaPagamento">
         </div>
         <div class="inputs">
             <label class="label">Valor(R$)</label>

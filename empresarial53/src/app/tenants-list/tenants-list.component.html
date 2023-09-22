@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="title">Lista de Locatários</div>
+    <div class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Numero Contrato</th>
+                <th>telefone</th>
+                <th>CPF ou CNPJ</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tenant of tenants; index as i">
+                <td>{{tenant.name}}</td>
+                <td>{{tenant.numeroContrato}}</td>
+                <td>{{tenant.telefone}}</td>
+                <td>{{tenant.cpfCnpj}}</td>
+                <td>{{tenant.email}}</td>
+
+            </tr>
+        </tbody>
+    </div>
+</div>
