@@ -1,1 +1,43 @@
-<p>payments-list works!</p>
+<div class="container">
+    <div class="dropdown">
+        <dropdown-basic></dropdown-basic>
+    </div>
+    <div class="title">Lista de Pagamentos</div>
+    <div class="table">
+        <thead>
+            <tr>
+                <th>Ordem</th>
+                <th>Sala</th>
+                <th>Data</th>
+                <th>Valor</th>
+                <th>Observação</th>
+                <th>Forma</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let payment of payments; index as i">
+                <td>{{payment.orderNum}}</td>
+                <td>{{payment.numeroSala}}</td>
+                <td>{{payment.diaPagamento}}</td>
+                <td>{{payment.valor}}</td>
+                <td>{{payment.observacao}}</td>
+                <td>{{payment.formaPagamento}}</td>
+                <td>
+                    <div class="row">
+                        <div class="col">
+                            <div ngbDropdown class="d-inline-block">
+                                <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <button (click)="edit(payment.orderNum)" ngbDropdownItem>Editar</button>
+                                    <button (click)="delete(payment.orderNum)" ngbDropdownItem>Excluir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </div>
+</div>

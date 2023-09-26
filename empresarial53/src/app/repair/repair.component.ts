@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { ScreenStrategy } from './strategies/screen-strategy';
 
 @Component({
   selector: 'app-repair',
@@ -8,7 +10,10 @@ import { FormGroup } from '@angular/forms';
 })
 export class RepairComponent implements OnInit{
 
-  constructor(){}
+  constructor(
+    private activatedRoute:ActivatedRoute,
+    private screenStrategy:ScreenStrategy,
+  ){}
   
   public ngOnInit(): void {
     throw new Error('Method not implemented.');

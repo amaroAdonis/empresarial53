@@ -4,6 +4,8 @@ import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 import { TenantsListRoutingModule } from "./tenants-list-routing.module";
+import { DropdownModule } from "../dropdown/dropdown.module";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
     declarations: [
@@ -13,7 +15,10 @@ import { TenantsListRoutingModule } from "./tenants-list-routing.module";
         CommonModule,
         HttpClientModule,
         ReactiveFormsModule,
-        TenantsListRoutingModule
+        TenantsListRoutingModule,
+        DropdownModule,
+        NgbModule,
+
     ]
 })
 export class TenantsListModule {}

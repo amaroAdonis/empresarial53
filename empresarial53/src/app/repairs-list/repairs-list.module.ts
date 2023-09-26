@@ -4,6 +4,8 @@ import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 import { RepairsListRoutingModule } from "./repairs-list-routing.module";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { DropdownModule } from "../dropdown/dropdown.module";
 
 @NgModule({
     declarations: [
@@ -13,7 +15,9 @@ import { RepairsListRoutingModule } from "./repairs-list-routing.module";
         CommonModule,
         HttpClientModule,
         ReactiveFormsModule,
-        RepairsListRoutingModule
+        RepairsListRoutingModule,
+        NgbModule,
+        DropdownModule
     ]
 })
 export class RepairsListModule {}

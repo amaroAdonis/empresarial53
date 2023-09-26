@@ -1,13 +1,17 @@
 <div class="container">
+    <div class="dropdown">
+        <dropdown-basic></dropdown-basic>
+    </div>
     <div class="title">Lista de Locatários</div>
     <div class="table">
         <thead>
             <tr>
                 <th>Nome</th>
-                <th>Numero Contrato</th>
+                <th>Contrato</th>
                 <th>telefone</th>
-                <th>CPF ou CNPJ</th>
-                <th>E-mail</th>
+                <th>CPF/CNPJ</th>
+                <th>Email</th>
+                <th>Ação</th>
             </tr>
         </thead>
         <tbody>
@@ -17,7 +21,20 @@
                 <td>{{tenant.telefone}}</td>
                 <td>{{tenant.cpfCnpj}}</td>
                 <td>{{tenant.email}}</td>
-
+                <td>
+                    <div class="row">
+                        <div class="col">
+                            <div ngbDropdown class="d-inline-block">
+                                <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <button (click)="edit(tenant.cpfCnpj)" ngbDropdownItem>Editar</button>
+                                    <button (click)="delete(tenant.cpfCnpj)" ngbDropdownItem>Excluir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
             </tr>
         </tbody>
     </div>

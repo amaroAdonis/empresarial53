@@ -4,6 +4,8 @@ import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 import { PaymentsListRoutingModule } from "./payments-list-routing.module";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { DropdownModule } from "../dropdown/dropdown.module";
 
 @NgModule({
     declarations: [PaymentsListComponent],
@@ -11,7 +13,9 @@ import { PaymentsListRoutingModule } from "./payments-list-routing.module";
         CommonModule,
         HttpClientModule,
         ReactiveFormsModule,
-        PaymentsListRoutingModule
+        PaymentsListRoutingModule,
+        NgbModule,
+        DropdownModule
     ]
 })
 export class PaymentsListModule {}

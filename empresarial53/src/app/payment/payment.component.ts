@@ -18,4 +18,6 @@ export class PaymentComponent {
     formaPagamento: new FormControl(null, [Validators.required])
   })
 
+  
+
 }

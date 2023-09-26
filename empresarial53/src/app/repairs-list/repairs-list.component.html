@@ -1,1 +1,41 @@
-<p>repairs-list works!</p>
+<div class="container">
+    <div class="dropdown">
+        <dropdown-basic></dropdown-basic>
+    </div>
+    <div class="title">Lista de Manutenções</div>
+    <div class="table">
+        <thead>
+            <tr>
+                <th>Ordem</th>
+                <th>Sala</th>
+                <th>Serviço</th>
+                <th>Data</th>
+                <th>Valor</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let repair of repairs; index as i">
+                <td>{{repair.orderNum}}</td>
+                <td>{{repair.numeroSala}}</td>
+                <td>{{repair.nomeServico}}</td>
+                <td>{{repair.dataServico}}</td>
+                <td>{{repair.valor}}</td>
+                <td>
+                    <div class="row">
+                        <div class="col">
+                            <div ngbDropdown class="d-inline-block">
+                                <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                                </button>
+                                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <button (click)="edit(repair.orderNum)" ngbDropdownItem>Editar</button>
+                                    <button (click)="delete(repair.orderNum)" ngbDropdownItem>Excluir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </div>
+</div>
