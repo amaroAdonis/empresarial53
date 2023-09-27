@@ -19,8 +19,8 @@ export class TenantComponent implements OnInit {
     private screenStrategy:ScreenStrategy,
     ){}
   ngOnInit(): void {
-    const id = this.activatedRoute.snapshot.paramMap.get("cpfCnpj") ?? undefined;
-    this.screenStrategy.loadTenant(id)
+    const id = this.activatedRoute.snapshot.paramMap.get("cpfCnpj");
+    this.screenStrategy.loadTenant(<string>id)
       .then(resp => this.populateForm(resp));
     this.title = this.screenStrategy.getTitle();
   }
@@ -31,13 +31,14 @@ export class TenantComponent implements OnInit {
     window.alert("Locatário adicionado com sucesso!")
 }
   public form: FormGroup = new FormGroup ({
-    roomNumber: new FormControl(null, [Validators.required]),
-    name: new FormControl(null, [Validators.required]),
+    numeroSala: new FormControl(null, [Validators.required]),
+    nome: new FormControl(null, [Validators.required]),
     cpfCnpj: new FormControl(null, [Validators.required]),
     inicioContrato: new FormControl(null, [Validators.required]),
     fimContrato: new FormControl(null, [Validators.required]),
     valorContrato: new FormControl(null, [Validators.required]),
-    expireDay: new FormControl(null, [Validators.required]),
+    diaVencimento: new FormControl(null, [Validators.required]),
+    atividade: new FormControl(null, [Validators.required]),
     email: new FormControl(null, [Validators.required]),
     telefone: new FormControl(null, [Validators.required]),
     whatsapp: new FormControl(null, [Validators.required]),

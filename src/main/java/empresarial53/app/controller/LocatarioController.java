@@ -19,8 +19,8 @@ public class LocatarioController {
         return locatarioDao.findAll();
     }
 
-    @GetMapping(value = "/cpfCnpj")
-    public Locatario getByCpfCnpj(@PathVariable Integer cpfCnpj) {
+    @GetMapping(value = "/{cpfCnpj}")
+    public Locatario getByCpfCnpj(@PathVariable String cpfCnpj) {
         return locatarioDao.findByCpfCnpj(cpfCnpj);
     }
 
@@ -30,7 +30,7 @@ public class LocatarioController {
     }
 
     @DeleteMapping("/{cpfCnpj}")
-    public void deleteLocatario(@PathVariable Integer cpfCnpj) {
+    public void deleteLocatario(@PathVariable String cpfCnpj) {
         locatarioDao.deleteByCpfCnpj(cpfCnpj);
     }
 

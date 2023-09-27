@@ -15,7 +15,7 @@ export class PaymentsListComponent implements OnInit {
   constructor(private http:HttpClient, private router:Router){}
   
   public ngOnInit(): void {
-
+    this.loadPayments();
   }
 
   public refresh(): void {
@@ -39,7 +39,7 @@ public delete(index:number) {
 
 public edit(index:number){
   const payment = this.payments[index];
-  this.router.navigateByUrl(`/api/pagamento/${payment.orderNum}`)
+  this.router.navigateByUrl(`/pagamento/${payment.orderNum}`)
 }
 
 }

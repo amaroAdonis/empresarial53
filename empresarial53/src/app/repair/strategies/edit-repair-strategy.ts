@@ -9,7 +9,7 @@ export class EditRepairStrategy implements ScreenStrategy {
 
     constructor(private http:HttpClient) {}
 
-    loadRepair(orderNum: string): Promise<Repair> {
+    loadRepair(orderNum: number): Promise<Repair> {
         const observable = this.http.get<Repair>(`api/manutencao/${orderNum}`);
         return firstValueFrom(observable);
     }

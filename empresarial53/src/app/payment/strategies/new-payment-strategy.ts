@@ -9,7 +9,7 @@ export class NewPaymentStrategy implements ScreenStrategy {
 
     constructor(private http:HttpClient) {}
 
-    loadPayment(orderNum?: string): Promise<Payment> {
+    loadPayment(orderNum?: number): Promise<Payment> {
         return Promise.resolve(<Payment>{});
     }
     savePayment(payment: Payment): Promise<Payment> {

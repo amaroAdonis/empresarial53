@@ -40,6 +40,6 @@ export class RepairsListComponent implements OnInit {
 
   public edit(index:number):void {
     const repair = this.repairs[index];
-    this.router.navigateByUrl(`/api/manutencao/${repair.orderNum}`)
+    this.router.navigateByUrl(`/manutencao/${repair.orderNum}`)
   }
 }

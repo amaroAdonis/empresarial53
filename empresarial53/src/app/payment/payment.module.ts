@@ -7,6 +7,7 @@ import { DropdownModule } from "../dropdown/dropdown.module";
 import { LoadEditPaymentStrategy } from "./load-edit-payment.component";
 import { LoadNewPaymentStrategy } from "./load-new-payment.component";
 import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { ReactiveFormsModule } from "@angular/forms";
         CommonModule,
         RouterModule,
         DropdownModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule
     ],
     exports: [
         RouterModule,

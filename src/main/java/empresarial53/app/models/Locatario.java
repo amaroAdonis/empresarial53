@@ -3,24 +3,24 @@ package empresarial53.app.models;
 import java.util.Date;
 
 public class Locatario {
-    private Integer salaNumber;
+    private Integer numeroSala;
     private String nome;
-    private Integer cpfCnpj;
+    private String cpfCnpj;
     private Date inicioContrato;
     private Date fimContrato;
     private Integer diaVencimento;
     private String email;
-    private Integer telefone;
-    private Integer whatsapp;
+    private String telefone;
+    private String whatsapp;
     private String atividade;
     private Double valorContrato;
-    private Integer numeroContrato;
+    private String numeroContrato;
 
     public Locatario() {
     }
 
-    public Locatario(Integer salaNumber, String nome, Integer cpfCnpj, Date inicioContrato, Date fimContrato, Integer diaVencimento, String email, Integer telefone, Integer whatsapp, String atividade, Double valorContrato, Integer numeroContrato) {
-        this.salaNumber = salaNumber;
+    public Locatario(Integer numeroSala, String nome, String cpfCnpj, Date inicioContrato, Date fimContrato, Integer diaVencimento, String email, String telefone, String whatsapp, String atividade, Double valorContrato, String numeroContrato) {
+        this.numeroSala = numeroSala;
         this.nome = nome;
         this.cpfCnpj = cpfCnpj;
         this.inicioContrato = inicioContrato;
@@ -34,12 +34,12 @@ public class Locatario {
         this.numeroContrato = numeroContrato;
     }
 
-    public Integer getSalaNumber() {
-        return salaNumber;
+    public Integer getNumeroSala() {
+        return numeroSala;
     }
 
-    public void setSalaNumber(Integer salaNumber) {
-        this.salaNumber = salaNumber;
+    public void setNumeroSala(Integer numeroSala) {
+        this.numeroSala = numeroSala;
     }
 
     public String getNome() {
@@ -50,11 +50,11 @@ public class Locatario {
         this.nome = nome;
     }
 
-    public Integer getCpfCnpj() {
+    public String getCpfCnpj() {
         return cpfCnpj;
     }
 
-    public void setCpfCnpj(Integer cpfCnpj) {
+    public void setCpfCnpj(String cpfCnpj) {
         this.cpfCnpj = cpfCnpj;
     }
 
@@ -90,19 +90,19 @@ public class Locatario {
         this.email = email;
     }
 
-    public Integer getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(Integer telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
-    public Integer getWhatsapp() {
+    public String getWhatsapp() {
         return whatsapp;
     }
 
-    public void setWhatsapp(Integer whatsapp) {
+    public void setWhatsapp(String whatsapp) {
         this.whatsapp = whatsapp;
     }
 
@@ -122,11 +122,11 @@ public class Locatario {
         this.valorContrato = valorContrato;
     }
 
-    public Integer getNumeroContrato() {
+    public String getNumeroContrato() {
         return numeroContrato;
     }
 
-    public void setNumeroContrato(Integer numeroContrato) {
+    public void setNumeroContrato(String numeroContrato) {
         this.numeroContrato = numeroContrato;
     }
 }

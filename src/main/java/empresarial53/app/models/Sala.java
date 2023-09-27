@@ -3,12 +3,12 @@ package empresarial53.app.models;
 
 public class Sala {
     private Integer numeroSala;
-    private Integer cpfCnpj;
+    private String cpfCnpj;
 
     public Sala() {
     }
 
-    public Sala(Integer numeroSala, Integer cpfCnpj) {
+    public Sala(Integer numeroSala, String cpfCnpj) {
         this.numeroSala = numeroSala;
         this.cpfCnpj = cpfCnpj;
     }
@@ -21,11 +21,11 @@ public class Sala {
         this.numeroSala = numeroSala;
     }
 
-    public Integer getCpfCnpj() {
+    public String getCpfCnpj() {
         return cpfCnpj;
     }
 
-    public void setCpfCnpj(Integer cpfCnpj) {
+    public void setCpfCnpj(String cpfCnpj) {
         this.cpfCnpj = cpfCnpj;
     }
 }

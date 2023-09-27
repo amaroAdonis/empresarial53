@@ -13,7 +13,7 @@
         <div class="form">
             <div class="row">
                 <div class="col">
-                        <select formControlName="roomNumber" class="items"> 
+                        <select formControlName="numeroSala" class="items"> 
                             <option>Escolha uma sala</option>
                             <option>01</option>
                             <option>02</option>
@@ -38,7 +38,7 @@
         </div>
         <div class="inputs">
             <label class="label">Nome do locatário</label>
-            <input formControlName="name" type="text" class="name" placeholder="Nome Locatário">
+            <input formControlName="nome" type="text" class="name" placeholder="Nome Locatário">
         </div>
         <div class="inputs">
             <label class="label">CPF ou CNPJ do locatário</label>
@@ -61,11 +61,15 @@
             <input formControlName="valorContrato" type="number" name="valorContrato" placeholder="R$">
         </div>
         <div class="inputs">
+            <label class="label">Atividade</label>
+            <input formControlName="atividade" type="text" class="atividade" placeholder="Atividade fim da empresa">
+        </div>
+        <div class="inputs">
             <label class="label">Dia do vencimento</label>
             <div class="form">
                 <div class="row">
                     <div class="col">
-                            <select formControlName="expireDay" class="items"> 
+                            <select formControlName="diaVencimento" class="items"> 
                                 <option>Escolha um dia</option>
                                 <option>01</option>
                                 <option>02</option>

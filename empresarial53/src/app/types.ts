@@ -1,14 +1,15 @@
 export interface Tenant {
-    roomNumber:number,
-    name:string,
+    numeroSala:number,
+    nome:string,
     cpfCnpj:number,
     inicioContrato: string,
     fimContrato: string,
     valorContrato:number,
-    expireDay:number,
+    diaVencimento:number,
+    atividade:string,
     email:string,
-    telefone:number,
-    whatsapp:number
+    telefone:string,
+    whatsapp:string
     numeroContrato:string
 }
 

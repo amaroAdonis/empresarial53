@@ -39,7 +39,7 @@ export class TenantsListComponent implements OnInit {
 
   public edit(index:number){
     const tenant = this.tenants[index];
-    this.router.navigateByUrl(`/api/locatario/${tenant.cpfCnpj}`)
+    this.router.navigateByUrl(`/locatario/${tenant.cpfCnpj}`)
   }
 
 }

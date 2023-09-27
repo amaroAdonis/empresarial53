@@ -9,7 +9,7 @@ export class NewRepairStrategy implements ScreenStrategy {
 
     constructor(private http:HttpClient){}
 
-    loadRepair(orderNum: string): Promise<Repair> {
+    loadRepair(orderNum: number): Promise<Repair> {
         return Promise.resolve(<Repair>{});
     }
     saveRepair(repair: Repair): Promise<Repair> {
