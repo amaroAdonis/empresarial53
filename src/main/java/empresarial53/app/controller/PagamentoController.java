@@ -39,4 +39,9 @@ public class PagamentoController {
         pagamentoDao.update(pagamento);
     }
 
+    @GetMapping("/todos/{numeroSala}")
+    public List<Pagamento> getPagamentoByRoom(@PathVariable Integer numeroSala) {
+        return pagamentoDao.getPaymentsForRoomNumber(numeroSala);
+    }
+
 }

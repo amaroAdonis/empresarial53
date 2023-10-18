@@ -1,72 +1,128 @@
 :host{
-    
-    .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 60px;
-        width: fit-content;
-        height: 100vh;
-        
 
-        .title{
-            width: fit-content;
-            
-
-        }
-
-        .inputs{
-            
+    @media (min-width: 769px) {
+        .container{
             display: flex;
             flex-direction: column;
-
-            label{
-                font-size: 14px;
+            align-items: center;
+            margin-top: 80px;
+            width: fit-content;
+            height: 100vh;
+            .title{
+                width: fit-content;
+                h2{
+                    font-size: 40px;
+                }
             }
-            input{
-                border-radius: 5px;
-                width: 250px;
+            .inputs{
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                label{
+                    font-size: 18px;
+                    font-weight: 500;
+
+                }
+                input{
+                    border-radius: 5px;
+                    width: 350px;
+                }
             }
-            
-
-        }
-
-        .buttons{
-            margin-top: 35px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            .left{
-                border: none;
-                text-align: center;
-                border-radius: 10px;
-                width: 120px;
-                background-color: darkgreen;
-                color: white;
-                margin-right: 5px;
-                margin-left: 10px;
-                height: 40px;
-                font-weight: 600;
+            .buttons{
+                margin-top: 35px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .left{
+                    border: none;
+                    text-align: center;
+                    border-radius: 10px;
+                    width: 150px;
+                    background-color: darkgreen;
+                    color: white;
+                    margin-right: 5px;
+                    margin-left: 10px;
+                    height: 40px;
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+                .right{
+                    border: none;
+                    text-align: center;
+                    border-radius: 10px;
+                    background-color: rgb(141, 141, 141);
+                    color: white;
+                    width: 120px;
+                    margin-left: 5px;
+                    margin-right: 10px;
+                    font-weight: 600;
+                    font-size: 20px;
+                }
             }
-            .right{
-                border: none;
-                text-align: center;
-                border-radius: 10px;
-                background-color: rgb(141, 141, 141);
-                color: white;
-                width: 100px;
-                margin-left: 5px;
-                margin-right: 10px;
-                font-weight: 600;
+            .link{
+                margin-top: 20px;
+                font-size: 20px;
             }
-
-        }
-
-        .link{
-
-            margin-top: 20px;
-            
-
         }
     }
+
+    @media (max-width: 768px) {
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 60px;
+            width: fit-content;
+            height: 100vh;
+            .title{
+                width: fit-content;
+            }
+            .inputs{
+                display: flex;
+                flex-direction: column;
+                label{
+                    font-size: 14px;
+                }
+                input{
+                    border-radius: 5px;
+                    width: 250px;
+                }
+            }
+            .buttons{
+                margin-top: 35px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .left{
+                    border: none;
+                    text-align: center;
+                    border-radius: 10px;
+                    width: 120px;
+                    background-color: darkgreen;
+                    color: white;
+                    margin-right: 5px;
+                    margin-left: 10px;
+                    height: 40px;
+                    font-weight: 600;
+                }
+                .right{
+                    border: none;
+                    text-align: center;
+                    border-radius: 10px;
+                    background-color: rgb(141, 141, 141);
+                    color: white;
+                    width: 100px;
+                    margin-left: 5px;
+                    margin-right: 10px;
+                    font-weight: 600;
+                }
+            }
+            .link{
+                margin-top: 20px;
+            }
+        }
+    }
+
+
+    
 }

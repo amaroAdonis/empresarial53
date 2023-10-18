@@ -1,178 +1,377 @@
 :host {
-    .container{
-        margin: 30px 0 30px 0;
-        padding: 0 0 0 0;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        .dropdown{
-            margin-bottom: 20px;
-            margin-top: 20px;
-            display: flex;
-            width: 320px;
-            
-        }
-        .short-info{
+    @media (min-width: 769px){
+        .container{
+            padding: 0 0 0 0;
             display: flex;
             flex-direction: column;
-            padding-left: 40px;
-            
-            
-            .locatario-nome{
-                
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                font-size: 25px;
-                color: black;
-                padding: 0;
-                margin: 0 0 -8px 0;
-                border: 0;
-            }
-            .sala-info{
-                font-style: italic;
-                font-size: 14px;
-                color: whitesmoke;
-            }
-        }
-        .divisor{
-            width: 320px;
-            align-self: center;
-            hr{
-               margin: 0;
-            }
-        }
-        .calendar-pay-status{
-            flex-direction: column;
-            text-align: center;
-            align-self: center;
-            .title{
-                font-size: 15px;
-                font-weight: 500;
-                margin: 10px 0 0 0;
-            }
-            table{
+            height: 100%;
+            justify-content: center;
+            width: 800px;
+            align-items: center;
+            .dropdown{
+                margin-bottom: 20px;
+                margin-top: 20px;
+                display: flex;
                 width: 320px;
-                border: solid black 1px;
-                text-align: center;
-                justify-content: center;
-              
-                tr{
-                    border: solid black 1px;
-                    height: 35px;
-                    td{
-                        border: solid black 1px;
-                        font-weight: 500;
-                        font-size: small;
-                        width: 53.33px;
-                    }
+            }
+            .short-info{
+                display: flex;
+                flex-direction: column;
+                width: 750px;
+                .locatario-nome{
+                    
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    font-size: 40px;
+                    color: black;
+                    padding: 0;
+                    margin: 0 0 -8px 0;
+                    border: 0;
+                }
+                .sala-info{
+                    font-style: italic;
+                    font-size: 14px;
+                    color: whitesmoke;
                 }
             }
-        }
-        .last-repairs{
-            flex-direction: column;
-            text-align: center;
-            align-self: center;
-            .title{
-                font-size: 15px;
-                font-weight: 500;
-                margin: 10px 0 0 0;
-            }
-            table{
-                width: 320px;
-                border: solid black 1px;
-                text-align: center;
+            .divisor{
+                width: 750px;
+                align-self: center;
                 justify-content: center;
-                align-items: center;
-                align-content: center;
-                tr{
-                    border: solid black 1px;
-                    height: 30px;
-                    th{
-                        border: solid black 1px;
+                hr{
+                   margin: 0;
+                }
+            }
+            .body{
+                display: flex;
+                flex-direction: row;
+                .tables{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .calendar-pay-status{
+                        flex-direction: column;
+                        text-align: center;
+                        align-self: center;
+                        .title{
+                            font-size: 18px;
+                            font-weight: 500;
+                            margin: 10px 0 0 0;
+                        }
+                        table{
+                            width: 400px;
+                            border: solid black 1px;
+                            text-align: center;
+                            justify-content: center;
+                          
+                            tr{
+                                border: solid black 1px;
+                                height: 50px;
+                                td{
+                                    border: solid black 1px;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    width: 53.33px;
+                                }
+                            }
+                        }
                     }
-                    td{
-                        border: solid black 1px;
-                        font-size: 13px;
+                    .last-repairs{
+                        flex-direction: column;
+                        text-align: center;
+                        align-self: center;
+                        .title{
+                            font-size: 15px;
+                            font-weight: 500;
+                            margin: 10px 0 0 0;
+                        }
+                        table{
+                            width: 320px;
+                            border: solid black 1px;
+                            text-align: center;
+                            justify-content: center;
+                            align-items: center;
+                            align-content: center;
+                            tr{
+                                border: solid black 1px;
+                                height: 30px;
+                                th{
+                                    border: solid black 1px;
+                                }
+                                td{
+                                    border: solid black 1px;
+                                    font-size: 13px;
+                                }
+                                .first-row{
+                                    text-align: left;
+                                }
+                            } 
+                        }
+                        .link{
+                            margin: 0;
+                            text-align: right;
+                            a{
+                                font-size: 13px;
+                            }
+                        }        
                     }
-                    .first-row{
-                        text-align: left;
+                }
+                .buttons{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    margin: 10px 0 10px 0;
+                    align-self: center;
+                    width: 350px;
+                    .new-tenant{
+                        background-color: darkgreen;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        height: 60px;
+                        width: 150px;
+                        font-weight: 600;
+                        margin: 2px;
+                    }
+                    .all-tenants{
+                        background-color: darkcyan;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        margin: 2px;
+                        height: 60px;
+                        width: 150px;
+                        font-weight: 600;
+                    }
+                    .new-payment{
+                        background-color: darkgreen;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        height: 60px;
+                        width: 150px;
+                        font-weight: 600;
+                        margin: 2px;
+                    }
+                    .all-payments{
+                        background-color: darkcyan;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        margin: 2px;
+                        height: 60px;
+                        width: 150px;
+                        font-weight: 600;
+                    }
+                    .new-repair{
+                        background-color: darkgreen;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        height: 60px;
+                        width: 150px;
+                        font-weight: 600;
+                        margin: 2px;
+                    }
+                    .all-repairs{
+                        background-color: darkcyan;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        margin: 2px;
+                        height: 60px;
+                        width: 150px;
+                        font-weight: 600;
+                    }
+                }  
+            }
+        }
+    }
+    @media (max-width: 768px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .container{
+            padding: 0 0 0 0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 370px;
+            .dropdown{
+                margin-bottom: 20px;
+                margin-top: 20px;
+                display: flex;
+                width: 320px;
+            }
+            .short-info{
+                display: flex;
+                flex-direction: column;
+                .locatario-nome{
+                    
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    font-size: 25px;
+                    color: black;
+                    padding: 0;
+                    margin: 0 0 -8px 0;
+                    border: 0;
+                }
+                .sala-info{
+                    font-style: italic;
+                    font-size: 14px;
+                    color: whitesmoke;
+                }
+            }
+            .divisor{
+                width: 320px;
+                align-self: center;
+                hr{
+                   margin: 0;
+                }
+            }
+            .body{
+                .tables{
+                    .calendar-pay-status{
+                        flex-direction: column;
+                        text-align: center;
+                        align-self: center;
+                        .title{
+                            font-size: 15px;
+                            font-weight: 500;
+                            margin: 10px 0 0 0;
+                        }
+                        table{
+                            width: 320px;
+                            border: solid black 1px;
+                            text-align: center;
+                            justify-content: center;
+                          
+                            tr{
+                                border: solid black 1px;
+                                height: 35px;
+                                td{
+                                    border: solid black 1px;
+                                    font-weight: 500;
+                                    font-size: small;
+                                    width: 53.33px;
+                                }
+                            }
+                        }
+                    }
+                    .last-repairs{
+                        flex-direction: column;
+                        text-align: center;
+                        align-self: center;
+                        .title{
+                            font-size: 15px;
+                            font-weight: 500;
+                            margin: 10px 0 0 0;
+                        }
+                        table{
+                            width: 320px;
+                            border: solid black 1px;
+                            text-align: center;
+                            justify-content: center;
+                            align-items: center;
+                            align-content: center;
+                            tr{
+                                border: solid black 1px;
+                                height: 30px;
+                                th{
+                                    border: solid black 1px;
+                                }
+                                td{
+                                    border: solid black 1px;
+                                    font-size: 13px;
+                                }
+                                .first-row{
+                                    text-align: left;
+                                }
+                            } 
+                        }
+                        .link{
+                            margin: 0;
+                            text-align: right;
+                            a{
+                                font-size: 13px;
+                            }
+                        }        
+                    }
+                }
+                .buttons{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    margin: 10px 0 10px 0;
+                    align-self: center;
+                    .new-tenant{
+                        background-color: darkgreen;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        height: 50px;
+                        width: 140px;
+                        font-weight: 400;
+                        margin: 2px;
+                        font-size: 14px;
+                    }
+                    .all-tenants{
+                        background-color: darkcyan;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        margin: 2px;
+                        height: 50px;
+                        width: 140px;
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
+                    .new-payment{
+                        background-color: darkgreen;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        height: 50px;
+                        width: 140px;
+                        font-weight: 400;
+                        margin: 2px;
+                        font-size: 14px;
+                    }
+                    .all-payments{
+                        background-color: darkcyan;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        margin: 2px;
+                        height: 50px;
+                        width: 140px;
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
+                    .new-repair{
+                        background-color: darkgreen;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        height: 50px;
+                        width: 140px;
+                        font-weight: 400;
+                        margin: 2px;
+                        font-size: 14px;
+                    }
+                    .all-repairs{
+                        background-color: darkcyan;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        margin: 2px;
+                        height: 50px;
+                        width: 140px;
+                        font-weight: 400;
+                        font-size: 14px;
                     }
                 } 
             }
-            .link{
-                margin: 0;
-                text-align: right;
-                a{
-                    font-size: 13px;
-                }
-            }        
         }
-        .buttons{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 10px 0 10px 0;
-            align-self: center;
-            .new-tenant{
-                background-color: darkgreen;
-                color: white;
-                border: none;
-                border-radius: 10px;
-                height: 60px;
-                width: 170px;
-                font-weight: 600;
-                margin: 2px;
-            }
-            .all-tenants{
-                background-color: darkcyan;
-                color: white;
-                border: none;
-                border-radius: 10px;
-                margin: 2px;
-                height: 60px;
-                width: 170px;
-                font-weight: 600;
-            }
-            .new-payment{
-                background-color: darkgreen;
-                color: white;
-                border: none;
-                border-radius: 10px;
-                height: 60px;
-                width: 170px;
-                font-weight: 600;
-                margin: 2px;
-            }
-            .all-payments{
-                background-color: darkcyan;
-                color: white;
-                border: none;
-                border-radius: 10px;
-                margin: 2px;
-                height: 60px;
-                width: 170px;
-                font-weight: 600;
-            }
-            .new-repair{
-                background-color: darkgreen;
-                color: white;
-                border: none;
-                border-radius: 10px;
-                height: 60px;
-                width: 170px;
-                font-weight: 600;
-                margin: 2px;
-            }
-            .all-repairs{
-                background-color: darkcyan;
-                color: white;
-                border: none;
-                border-radius: 10px;
-                margin: 2px;
-                height: 60px;
-                width: 170px;
-                font-weight: 600;
-            }
-        }   
     }
 }

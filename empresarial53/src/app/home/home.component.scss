@@ -1,50 +1,103 @@
 ;:host{
-    .container{
-
-        
-        display: flex;
-        flex-direction: column;    
-        margin-top: 30px;
-        width: 320px;
-        height: 100vh;
-
-        .dropdown{
-            margin-bottom: 20px;
-            margin-top: 20px;
+    @media (min-width: 769px) {
+        .container{
             display: flex;
-            width: 320px;
-            align-self: center;
-        }
-        .building{
-            align-self: center;
-            button{
-                color: white;
-                background-color: #000000b4;
-                border-radius: 5px;
-                width: 290px;
-                height: 50px;
-                font-weight: 600;
+            flex-direction: column;    
+            margin-top: 30px;
+            width: 700px;
+            height: 100vh;
+            .dropdown{
+                margin-bottom: 20px;
+                margin-top: 20px;
+                margin-left: 34px;
+                display: flex;
+                width: 300px;
+                
             }
-        }
-        .rooms{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            button{
-                color: black;
-                background-color: hsl(134, 74%, 27%);
-                border-radius: 5px;
-                width: 139.5px;
-                margin: 10px 0 ;
-                height: 40px;
-                font-weight: 600;
+            .building{
+                align-self: center;
+                button{
+                    color: white;
+                    background-color: #000000b4;
+                    border-radius: 5px;
+                    width: 610px;
+                    height: 70px;
+                    font-weight: 600;
+                    font-size: 20px;
+                }
             }
-            .left-button{
-                margin-right: 5px;
-            }
-            .rigth-button{
-                margin-left: 5px;
+            .rooms{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                button{
+                    color: black;
+                    background-color: hsl(134, 74%, 27%);
+                    border-radius: 5px;
+                    width: 300px;
+                    margin: 10px 0 ;
+                    height: 60px;
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+                .left-button{
+                    margin-right: 5px;
+                }
+                .rigth-button{
+                    margin-left: 5px;
+                }
             }
         }
     }
+    @media (max-width: 768px) {
+        .container{
+            display: flex;
+            flex-direction: column;    
+            margin-top: 30px;
+            width: 320px;
+            height: 100vh;
+            .dropdown{
+                margin-bottom: 20px;
+                margin-top: 20px;
+                margin-left: 34px;
+                display: flex;
+                width: 320px;
+                align-self: center;
+            }
+            .building{
+                align-self: center;
+                button{
+                    color: white;
+                    background-color: #000000b4;
+                    border-radius: 5px;
+                    width: 290px;
+                    height: 50px;
+                    font-weight: 600;
+                }
+            }
+            .rooms{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                button{
+                    color: black;
+                    background-color: hsl(134, 74%, 27%);
+                    border-radius: 5px;
+                    width: 139.5px;
+                    margin: 10px 0 ;
+                    height: 40px;
+                    font-weight: 600;
+                }
+                .left-button{
+                    margin-right: 5px;
+                }
+                .rigth-button{
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+
+    
 }

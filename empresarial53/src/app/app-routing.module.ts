@@ -20,7 +20,7 @@ const routes: Routes = [
         loadChildren: () => import("./home/home.module").then(m => m.HomeModule)
       },
       {
-        path:"sala:?",
+        path:"sala",
         loadChildren: () => import("./room-template/room-template.module").then(m => m.RoomTemplateModule)
       },
       {

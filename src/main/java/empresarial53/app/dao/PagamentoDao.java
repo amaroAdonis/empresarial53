@@ -54,6 +54,11 @@ public class PagamentoDao {
         jdbcTemplate.update(sql, pagamento.getNumeroSala(), pagamento.getDiaPagamento(), pagamento.getValor(), pagamento.getFormaPagamento(), pagamento.getObservacao(), pagamento.getOrderNum());
     }
 
+    public List<Pagamento> getPaymentsForRoomNumber(Integer numeroSala) {
+        String sql = "SELECT * FROM pagamento WHERE numero_sala = ?";
+        return jdbcTemplate.query(sql, this::getPagamentoFromResultSet, numeroSala);
+    }
+
 
 
 

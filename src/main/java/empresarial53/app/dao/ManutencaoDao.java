@@ -27,6 +27,16 @@ public class ManutencaoDao {
         return manutencao;
     }
 
+    private Manutencao getManutencaoFromResultSetShort(ResultSet rs, int rowNum) throws SQLException {
+
+        Manutencao manutencao = new Manutencao();
+        manutencao.setNomeServico(rs.getString("nome_servico"));
+        manutencao.setDataServico(rs.getDate("data_servico"));
+        manutencao.setValor(rs.getDouble("valor_servico"));
+
+        return manutencao;
+    }
+
     public void novaManutencao(Manutencao manutencao) {
         String sql = "INSERT INTO manutencao(numero_sala, nome_servico, data_servico, valor_servico)" +
                 "values(?, ?, ?, ?)";
@@ -51,6 +61,16 @@ public class ManutencaoDao {
     public void update(Manutencao manutencao) {
         String sql = "UPDATE manutencao SET numero_sala = ?, nome_servico = ?, data_servico = ?, valor_servico = ? WHERE order_num = ?";
         jdbcTemplate.update(sql, manutencao.getNumeroSala(), manutencao.getNomeServico(), manutencao.getDataServico(), manutencao.getValor(), manutencao.getOrderNum());
+    }
+
+    public List<Manutencao> lastRepairs() {
+        String sql = "SELECT * FROM manutencao ORDER BY data_servico DESC LIMIT 2";
+        return jdbcTemplate.query(sql, this::getManutencaoFromResultSet);
+    }
+
+    public List<Manutencao> repairsForRoomNumber(Integer numeroSala) {
+        String sql = "SELECT * FROM manutencao WHERE numero_sala = ?";
+        return jdbcTemplate.query(sql, this::getManutencaoFromResultSetShort, numeroSala);
     }
 
 

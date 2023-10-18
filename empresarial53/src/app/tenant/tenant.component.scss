@@ -1,93 +1,254 @@
 :host{
-    .container{
-        margin-top: 30px;
-        padding: 0 0 0 0;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        .dropdown{
-            margin-bottom: 20px;
-            margin-top: 20px;
+    @media (min-width: 769px){
+        .container{
+            padding: 0 0 0 0;
             display: flex;
-            width: 320px;
-            align-self: center;
-        }
-        .new-room-title{
-            width: 320px;
-            align-self: center;
-            p{
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                font-size: 20px;
-                color: #262626;
-                padding: 0;
-                margin: 0 0 -4px 0;
-                border: 0;
-                text-align: left;
-            }
-        }
-        .divisor{
-            width: 320px;
-            align-self: center;
-            hr{
-                margin: 0;
-                margin-bottom: 20px;
-             }
-        }
-        .data-input{
             flex-direction: column;
-            align-self: center;
-            .label{
-                margin: 6px 0 0 0;
-                font-size: 14px;
-                font-weight: 400;
+            height: 100vh;
+            width: 700px;
+            .dropdown{
+                margin-bottom: 20px;
+                margin-top: 20px;
+                display: flex;
+                width: 700px;
+                align-self: center;
             }
-            input{
-                width: 320px;
-                border-radius: 5px;
-            }
-            .atividade{
-                height:35px;
-            }
-            .row{
-                .col{
-                    select{
-                        border-radius: 5px;
-                    }
+            .new-room-title{
+                width: 700px;
+                align-self: center;
+                p{
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-size: 30px;
+                    color: #262626;
+                    padding: 0;
+                    margin: 0 0 -4px 0;
+                    border: 0;
+                    text-align: left;
                 }
             }
-            .inputs{
+            .divisor{
+                width: 670px;
+                justify-content: left;
+                hr{
+                    margin: 0;
+                    margin-bottom: 20px;
+                 }
+            }
+            .data-input{
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: center;
+                .box1{
+                    width: 350px;
+                    .label{
+                        margin: 6px 0 0 0;
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                    input{
+                        width: 320px;
+                        border-radius: 5px;
+                        height: 40px;
+                    }
+                    .atividade{
+                        height:35px;
+                    }
+                    .row{
+                        .col{
+                            select{
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                    .inputs{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                .box2{
+                    width: 350px;
+                    .label{
+                        margin: 6px 0 0 0;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    input{
+                        width: 320px;
+                        border-radius: 5px;
+                    }
+                    .atividade{
+                        height:35px;
+                    }
+                    .row{
+                        .col{
+                            select{
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                    .inputs{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                
             }
-        }
-        .buttons{
-            margin-top: 35px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            .left{
-                border: none;
-                text-align: center;
-                border-radius: 10px;
-                width: 170px;
-                background-color: darkgreen;
-                color: white;
-                margin-right: 5px;
-                margin-left: 10px;
-                height: 40px;
-                font-weight: 600;
-            }
-            .right{
-                border: none;
-                text-align: center;
-                border-radius: 10px;
-                background-color: red;
-                color: white;
-                width: 120px;
-                margin-left: 5px;
-                margin-right: 10px;
-                font-weight: 600;
+            .buttons{
+                margin-top: 15px;
+                margin-right: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: right;
+                .left{
+                    border: none;
+                    text-align: center;
+                    border-radius: 10px;
+                    width: 170px;
+                    background-color: darkgreen;
+                    color: white;
+                    margin-right: 5px;
+                    margin-left: 10px;
+                    height: 40px;
+                    font-weight: 600;
+                }
+                .right{
+                    border: none;
+                    text-align: center;
+                    border-radius: 10px;
+                    background-color: red;
+                    color: white;
+                    width: 120px;
+                    margin-left: 5px;
+                    margin-right: 10px;
+                    font-weight: 600;
+                }
             }
         }
     }
+    @media (max-width: 768px){
+        .container{
+            margin-top: 30px;
+            padding: 0 0 0 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            .dropdown{
+                margin-bottom: 20px;
+                margin-top: 20px;
+                display: flex;
+                width: 320px;
+                align-self: center;
+            }
+            .new-room-title{
+                width: 320px;
+                align-self: center;
+                p{
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-size: 20px;
+                    color: #262626;
+                    padding: 0;
+                    margin: 0 0 -4px 0;
+                    border: 0;
+                    text-align: left;
+                }
+            }
+            .divisor{
+                width: 320px;
+                align-self: center;
+                hr{
+                    margin: 0;
+                    margin-bottom: 20px;
+                 }
+            }
+            .data-input{
+                display: flex;
+                flex-direction: column;
+                .box1{
+                flex-direction: column;
+                align-self: center;
+                .label{
+                    margin: 6px 0 0 0;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+                input{
+                    width: 320px;
+                    border-radius: 5px;
+                }
+                .atividade{
+                    height:35px;
+                }
+                .row{
+                    .col{
+                        select{
+                            border-radius: 5px;
+                        }
+                    }
+                }
+                .inputs{
+                    display: flex;
+                    flex-direction: column;
+                }
+                }
+                .box2{
+                    flex-direction: column;
+                align-self: center;
+                .label{
+                    margin: 6px 0 0 0;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+                input{
+                    width: 320px;
+                    border-radius: 5px;
+                }
+                .atividade{
+                    height:35px;
+                }
+                .row{
+                    .col{
+                        select{
+                            border-radius: 5px;
+                        }
+                    }
+                }
+                .inputs{
+                    display: flex;
+                    flex-direction: column;
+                }
+                }
+                
+            }
+            .buttons{
+                margin-top: 35px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .left{
+                    border: none;
+                    text-align: center;
+                    border-radius: 10px;
+                    width: 170px;
+                    background-color: darkgreen;
+                    color: white;
+                    margin-right: 5px;
+                    margin-left: 10px;
+                    height: 40px;
+                    font-weight: 600;
+                }
+                .right{
+                    border: none;
+                    text-align: center;
+                    border-radius: 10px;
+                    background-color: red;
+                    color: white;
+                    width: 120px;
+                    margin-left: 5px;
+                    margin-right: 10px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    
 }
