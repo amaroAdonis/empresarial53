@@ -19,9 +19,9 @@ public class LocatarioController {
         return locatarioDao.findAll();
     }
 
-    @GetMapping(value = "/{cpfCnpj}")
-    public Locatario getByCpfCnpj(@PathVariable String cpfCnpj) {
-        return locatarioDao.findByCpfCnpj(cpfCnpj);
+    @GetMapping(value = "/{numeroSala}")
+    public Locatario getByNumeroSala(@PathVariable Integer numeroSala) {
+        return locatarioDao.findByNumeroSala(numeroSala);
     }
 
     @PostMapping

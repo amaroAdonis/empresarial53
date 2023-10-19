@@ -63,15 +63,17 @@ public class ManutencaoDao {
         jdbcTemplate.update(sql, manutencao.getNumeroSala(), manutencao.getNomeServico(), manutencao.getDataServico(), manutencao.getValor(), manutencao.getOrderNum());
     }
 
-    public List<Manutencao> lastRepairs() {
-        String sql = "SELECT * FROM manutencao ORDER BY data_servico DESC LIMIT 2";
-        return jdbcTemplate.query(sql, this::getManutencaoFromResultSet);
+    public List<Manutencao> lastRepairs(Integer numeroSala) {
+        String sql = "SELECT * FROM manutencao WHERE numero_sala = ? ORDER BY data_servico DESC LIMIT 2";
+        return jdbcTemplate.query(sql, this::getManutencaoFromResultSet, numeroSala);
     }
 
     public List<Manutencao> repairsForRoomNumber(Integer numeroSala) {
         String sql = "SELECT * FROM manutencao WHERE numero_sala = ?";
         return jdbcTemplate.query(sql, this::getManutencaoFromResultSetShort, numeroSala);
     }
+
+
 
 
 }

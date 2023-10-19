@@ -5,10 +5,10 @@
     <div class="head-info">
         <div class="short-info">
             <div class="locatario-nome">
-                Fulano Sicrano de Beltrano
+                {{tenant?.nome}}
             </div>
             <div class="sala-info">
-                Sala 00
+                Sala {{tenant?.numeroSala}}
             </div>
         </div>
     </div>
@@ -19,30 +19,32 @@
         <div class="box1">
             <div class="long-info">
                 <div class="right-info">
+                    <p class="title">CPF/CNPJ</p>
+                    <p class="answer">{{tenant?.cpfCnpj}}</p>
                     <p class="title">CONTRATO N°</p>
-                    <p class="answer">123456</p>
+                    <p class="answer">{{tenant?.numeroContrato}}</p>
                     <p class="title">INÍCIO DO CONTRATO</p>
-                    <p class="answer">dd/MM/yyyy</p>
+                    <p class="answer">{{tenant?.inicioContrato}}</p>
                     <p class="title">FIM DO CONTRATO</p>
-                    <p class="answer">dd/MM/yyyy</p>
+                    <p class="answer">{{tenant?.fimContrato}}</p>
                     <p class="title">E-MAIL</p>
-                    <p class="answer">dd/MM/yyyy</p>
+                    <p class="answer">{{tenant?.email}}</p>
                     <p class="title">TELEFONE</p>
-                    <p class="answer">(82) 3333-3333</p>
+                    <p class="answer">{{tenant?.telefone}}</p>
                     <p class="title">WHATSAPP</p>
-                    <p class="answer">(82) 99999-9999</p>
+                    <p class="answer">{{tenant?.whatsapp}}</p>
                 </div>
                 <div class="left-info">
                     <p class="title">ATIVIDADE</p>
-                    <p class="answer">CONTÁBIL/ADM</p>
+                    <p class="answer">{{tenant?.atividade}}</p>
                     <div class="alertbox1">
                         <p class="text">FIM DO CONTRATO:</p>
-                        <p class="date">dd/MM/yyyy</p>
+                        <p class="date">{{tenant?.fimContrato}}</p>
                         <p class="text">MESES</p>
                     </div>
                     <div class="alertbox2">
                         <p class="text">MENSALIDADE VENCE <br> TODO DIA</p>
-                        <p class="date">00</p>
+                        <p class="date">{{tenant?.diaVencimento}}</p>
                     </div>
                 </div>
             </div>
@@ -77,15 +79,10 @@
                         <th>Data</th>
                         <th>Custo</th>
                     </tr>
-                    <tr>
-                        <td class="first-row">Reparo do forro</td>
-                        <td>11/11/11</td>
-                        <td>R$ 100,00</td>
-                    </tr>
-                    <tr>
-                        <td class="first-row">Pintura porta</td>
-                        <td>20/02/20</td>
-                        <td>R$ 200,00</td>
+                    <tr *ngFor="let repair of repairs">
+                        <td class="first-row">{{repair?.nomeServico}}</td>
+                        <td>{{repair.dataServico}}</td>
+                        <td>{{repair.valor}}</td>
                     </tr>
                 </table>
                 <div class="link">

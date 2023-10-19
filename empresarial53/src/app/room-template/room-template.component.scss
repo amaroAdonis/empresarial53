@@ -2,7 +2,6 @@
 
     @media (min-width: 769px){
         width: 100vw;
-
         .container{
             display: flex;
             flex-direction: column;    
@@ -20,10 +19,10 @@
                 .short-info{
                     display: flex;
                     flex-direction: column;
-                    align-self: center;
+                    
                     
                     .locatario-nome{
-                        text-align: center;
+                        
                         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                         font-size: 40px;
                         color: black;
@@ -223,7 +222,6 @@
                     }
                 }
             }
-            
         }
     }
     @media (max-width: 768px){
@@ -243,12 +241,11 @@
             }
             .head-info{
                 .short-info{
-                   
                     display: flex;
                     flex-direction: column;
-                    align-self: center;
+                    width: 320px;
+                    
                     .locatario-nome{
-                        text-align: center;
                         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                         font-size: 25px;
                         color: black;
@@ -260,7 +257,6 @@
                         font-style: italic;
                         font-size: 14px;
                         color: whitesmoke;
-                        
                     }
                 }
             }

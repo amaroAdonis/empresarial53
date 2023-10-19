@@ -59,6 +59,11 @@ public class LocatarioDao {
         return jdbcTemplate.queryForObject(sql, this::getLocatarioFromResultSet, cpfCnpj);
     }
 
+    public Locatario findByNumeroSala(Integer numeroSala) {
+        String sql = "SELECT * FROM locatario WHERE numero_sala = ?";
+        return jdbcTemplate.queryForObject(sql, this::getLocatarioFromResultSet, numeroSala);
+    }
+
     public void deleteByCpfCnpj(String cpfCnpj) {
         String sql = "DELETE FROM locatario WHERE cpf_cnpj = ?";
         jdbcTemplate.update(sql, cpfCnpj);

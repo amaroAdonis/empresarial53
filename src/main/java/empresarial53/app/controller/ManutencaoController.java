@@ -25,6 +25,9 @@ public class ManutencaoController {
        return manutencaoDao.findByOrder(order);
     }
 
+    @GetMapping(value = "/manutencoes/{numeroSala}")
+    public List<Manutencao> getUltimasManutencoes(@PathVariable Integer numeroSala) {return manutencaoDao.lastRepairs(numeroSala);}
+
     @PostMapping("")
     public void createManutencao(@RequestBody Manutencao manutencao) {
         manutencaoDao.novaManutencao(manutencao);
