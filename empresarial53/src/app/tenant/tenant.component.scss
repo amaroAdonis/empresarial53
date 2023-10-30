@@ -43,7 +43,7 @@
                     .label{
                         margin: 6px 0 0 0;
                         font-size: 16px;
-                        font-weight: 400;
+                        font-weight: 500;
                     }
                     input{
                         width: 320px;
@@ -69,8 +69,8 @@
                     width: 350px;
                     .label{
                         margin: 6px 0 0 0;
-                        font-size: 14px;
-                        font-weight: 400;
+                        font-size: 16px;
+                        font-weight: 500;
                     }
                     input{
                         width: 320px;
@@ -89,6 +89,29 @@
                     .inputs{
                         display: flex;
                         flex-direction: column;
+                    }
+                    .checkbox{
+                        margin-top: 15px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        .label{
+                            margin: 0;
+                            
+                        }
+                        .active{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: left;
+                            width: 30px;
+                        }
+                        label{
+                            width: 120px;
+                            
+                        }
+                        input{
+                            height: 15px;
+                        }
                     }
                 }
                 
@@ -163,59 +186,76 @@
             .data-input{
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 .box1{
-                flex-direction: column;
-                align-self: center;
-                .label{
-                    margin: 6px 0 0 0;
-                    font-size: 14px;
-                    font-weight: 400;
-                }
-                input{
-                    width: 320px;
-                    border-radius: 5px;
-                }
-                .atividade{
-                    height:35px;
-                }
-                .row{
-                    .col{
-                        select{
-                            border-radius: 5px;
-                        }
-                    }
-                }
-                .inputs{
                     display: flex;
                     flex-direction: column;
-                }
+                    width: 320px;
+                    .label{
+                        margin: 6px 0 0 0;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    input{
+                        width: 320px;
+                        border-radius: 5px;
+                    }
+                    .atividade{
+                        height:35px;
+                    }
+                    .row{
+                        .col{
+                            select{
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                    .inputs{
+                        display: flex;
+                        flex-direction: column;
+                    }
                 }
                 .box2{
-                    flex-direction: column;
-                align-self: center;
-                .label{
-                    margin: 6px 0 0 0;
-                    font-size: 14px;
-                    font-weight: 400;
-                }
-                input{
                     width: 320px;
-                    border-radius: 5px;
-                }
-                .atividade{
-                    height:35px;
-                }
-                .row{
-                    .col{
-                        select{
-                            border-radius: 5px;
-                        }
-                    }
-                }
-                .inputs{
                     display: flex;
                     flex-direction: column;
-                }
+                    
+                
+                    .label{
+                        margin: 6px 0 0 0;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    input{
+                        width: 320px;
+                        border-radius: 5px;
+                    }
+                    .atividade{
+                        height:35px;
+                    }
+                    .row{
+                        .col{
+                            select{
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                    .inputs{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .checkbox{
+                        margin-top: 15px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        label{
+                            width: 150px;
+                        }
+                        input{
+                            height: 15px;
+                        }
+                    }
                 }
                 
             }

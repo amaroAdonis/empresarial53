@@ -6,7 +6,7 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            height: 100vh;
+            height: 100%;
             .body{
                 display: flex;
                 flex-direction: row;
@@ -14,7 +14,7 @@
                 width: 800px;
                 align-self: center;
                 justify-content: space-around;
-                margin-top: 50px;
+                margin-top: 25px;
                 .box1{
                     display: flex;
                     flex-direction: column; 
@@ -135,15 +135,15 @@
                         width: 650px;
                         display: flex;
                         flex-direction: row;
-                        margin-top: 20px;
+                        margin-top: 10px;
                         background-color: rgb(90, 90, 90);
                         border-radius: 15px;
                         padding: 5px;
-                        height: 200px;
+                        height: 160px;
                         justify-content: center;
                        
                         .adress{
-                            padding-top: 20px;
+                            
                             padding-right: 25px;
                             text-align: right;
                             margin: 0;
@@ -157,7 +157,7 @@
                             }   
                         }
                         .contact-info{
-                            padding-top: 50px;
+                            padding-top: 35px;
                             margin-right: 25px;
                             justify-content: center;
                             height: 80px;
@@ -170,7 +170,7 @@
                                 color: white;
                             }
                             .fa-solid.fa-envelope{
-                                font-size: 16px;
+                                font-size: 15px;
                             }
                             margin: 0;
                         }                
@@ -333,6 +333,7 @@
                             }   
                         }
                         .contact-info{
+                            padding-top: 10px;
                             margin-right: 25px;
                             justify-content: center;
                             height: 80px;
@@ -344,7 +345,7 @@
                                 color: white;
                             }
                             .fa-solid.fa-envelope{
-                                font-size: 10px;
+                                font-size: 9px;
                             }
                             margin: 0;
                         }                

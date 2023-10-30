@@ -39,9 +39,10 @@ public class PagamentoDao {
         return jdbcTemplate.query(sql, this::getPagamentoFromResultSet);
     }
 
-    public Pagamento findByOrderNum(Integer OrderNum) {
+
+    public Pagamento findByOrderNum(Integer order) {
         String sql = "SELECT * FROM pagamento WHERE order_num = ?";
-        return jdbcTemplate.queryForObject(sql, this::getPagamentoFromResultSet, OrderNum);
+        return jdbcTemplate.queryForObject(sql, this::getPagamentoFromResultSet, order);
     }
 
     public void deleteByOrder(Integer order) {

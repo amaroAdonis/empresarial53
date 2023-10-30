@@ -33,69 +33,73 @@
                     <p class="answer">{{tenant?.telefone}}</p>
                     <p class="title">WHATSAPP</p>
                     <p class="answer">{{tenant?.whatsapp}}</p>
-                </div>
-                <div class="left-info">
                     <p class="title">ATIVIDADE</p>
                     <p class="answer">{{tenant?.atividade}}</p>
-                    <div class="alertbox1">
-                        <p class="text">FIM DO CONTRATO:</p>
-                        <p class="date">{{tenant?.fimContrato}}</p>
-                        <p class="text">MESES</p>
-                    </div>
-                    <div class="alertbox2">
-                        <p class="text">MENSALIDADE VENCE <br> TODO DIA</p>
-                        <p class="date">{{tenant?.diaVencimento}}</p>
-                    </div>
                 </div>
             </div>
         </div>
         <div class="box2">
-            <div class="calendar-pay-status">
-                <p class="title">STATUS DE PAGAMENTO - 20XX</p>
-                <table>
-                    <tr>
-                        <td>JAN</td>
-                        <td>FEV</td>
-                        <td>MAR</td>
-                        <td>ABR</td>
-                        <td>MAI</td>
-                        <td>JUN</td>
-                    </tr>
-                    <tr>
-                        <td>JUL</td>
-                        <td>AGO</td>
-                        <td>SET</td>
-                        <td>OUT</td>
-                        <td>NOV</td>
-                        <td>DEZ</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="last-repairs">
-                <p class="title">ÚLTIMOS REPAROS/MELHORIAS</p>
-                <table>
-                    <tr>
-                        <th>Serviço</th>
-                        <th>Data</th>
-                        <th>Custo</th>
-                    </tr>
-                    <tr *ngFor="let repair of repairs">
-                        <td class="first-row">{{repair?.nomeServico}}</td>
-                        <td>{{repair.dataServico}}</td>
-                        <td>{{repair.valor}}</td>
-                    </tr>
-                </table>
-                <div class="link">
-                    <a href="#">Ver todos...</a>
+            <!--
+                <div class="calendar-pay-status">
+                    <p class="title">STATUS DE PAGAMENTO - 20XX</p>
+                    <table>
+                        <tr>
+                            <td>JAN</td>
+                            <td>FEV</td>
+                            <td>MAR</td>
+                            <td>ABR</td>
+                            <td>MAI</td>
+                            <td>JUN</td>
+                        </tr>
+                        <tr>
+                            <td>JUL</td>
+                            <td>AGO</td>
+                            <td>SET</td>
+                            <td>OUT</td>
+                            <td>NOV</td>
+                            <td>DEZ</td>
+                        </tr>
+                    </table>
                 </div>
+            -->
+            <div class="alertbox1">
+                <p class="text">FIM DO CONTRATO:</p>
+                <p class="date">{{tenant?.fimContrato}}</p>
+                <p class="text">MESES</p>
             </div>
-            <div class="buttons">
-                <button class="pay-info">Informar Pagamento</button>
-                <button class="contact">Entrar em contato</button>
+            <div class="alertbox2">
+                <p class="text">MENSALIDADE VENCE <br> TODO DIA</p>
+                <p class="date">{{tenant?.diaVencimento}}</p>
             </div>
-            <div class="clean-room">
-                <a href="#">Liberar sala</a>
+        </div>
+        
+
+    </div>
+    <div class="box3">
+        <div class="last-repairs">
+            <p class="title">ÚLTIMOS REPAROS/MELHORIAS</p>
+            <table>
+                <tr>
+                    <th>Serviço</th>
+                    <th>Data</th>
+                    <th>Custo</th>
+                </tr>
+                <tr *ngFor="let repair of repairs">
+                    <td class="first-row">{{repair?.nomeServico}}</td>
+                    <td>{{repair.dataServico}}</td>
+                    <td>{{repair.valor}}</td>
+                </tr>
+            </table>
+            <div class="link">
+                <a href="/lista-manutencoes">Ver todos...</a>
             </div>
+        </div>
+        <div class="buttons">
+            <button onclick="location.href='/pagamento'" class="pay-info">Informar Pagamento</button>
+            <a href="https://wa.me/+55{{tenant?.whatsapp}}"  class="contact">Entrar em contato</a>
+        </div>
+        <div class="clean-room">
+            <a href="#">Liberar sala</a>
         </div>
     </div>
 </div>

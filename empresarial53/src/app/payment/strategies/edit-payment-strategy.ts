@@ -10,7 +10,7 @@ export class EditPaymentStrategy implements ScreenStrategy{
     constructor(private http:HttpClient){}
 
     loadPayment(orderNum?: number | undefined): Promise<Payment> {
-        const observable = this.http.get<Payment>(`api/pagamento/${orderNum}`);
+        const observable = this.http.get<Payment>(`api/pagamento/all/${orderNum}`);
         return firstValueFrom(observable);
     }
     savePayment(payment: Payment): Promise<Payment> {

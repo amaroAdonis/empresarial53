@@ -10,7 +10,7 @@ export class EditTenantStrategy implements ScreenStrategy{
     constructor(private http:HttpClient){}
     
     loadTenant(cpfCnpj?: string): Promise<Tenant> {
-        const observable = this.http.get<Tenant>(`api/locatario/${cpfCnpj}`);
+        const observable = this.http.get<Tenant>(`api/locatario/all/${cpfCnpj}`);
         return firstValueFrom(observable);
     }
     saveTenant(tenant: Tenant): Promise<Tenant> {

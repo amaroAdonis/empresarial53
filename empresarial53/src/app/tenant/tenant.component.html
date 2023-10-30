@@ -16,6 +16,7 @@
                     <div class="col">
                             <select formControlName="numeroSala" class="items"> 
                                 <option>Escolha uma sala</option>
+                                <option>00</option>
                                 <option>01</option>
                                 <option>02</option>
                                 <option>03</option>
@@ -43,7 +44,7 @@
             </div>
             <div class="inputs">
                 <label class="label">CPF ou CNPJ do locatário</label>
-                <input formControlName="cpfCnpj" type="number" class="cpfCnpj" placeholder="CPF ou CNPJ">
+                <input formControlName="cpfCnpj" type="text" class="cpfCnpj" placeholder="CPF ou CNPJ">
             </div>
             <div class="inputs">
                 <label class="label">Número do Contrato</label>
@@ -59,7 +60,7 @@
             </div>
             <div class="inputs">
                 <label class="label">Valor do Contrato</label>
-                <input formControlName="valorContrato" type="number" name="valorContrato" placeholder="R$">
+                <input formControlName="valorContrato" type="number" name="valorContrato" placeholder="R$"  min="0.00" max="100000.00" step="0.01">
             </div>
         </div>
         <div class="box2">
@@ -122,11 +123,16 @@
                 <label class="label">Whatsapp</label>
                 <input formControlName="whatsapp" type="number" class="whatsapp" placeholder="(XX) XXXXX-XXXX">
             </div>
+            <div class="checkbox">
+                <label class="label">Contrato ativo?</label>
+                <input formControlName="active" type="checkbox" class="active" value="true" name="active" id="active">
+                <input type="hidden" name="active" formControlName="active" value="false" class="active" id="active">
+            </div>
         </div>
     </div>
     <div class="buttons">
 
-        <button (click)="submit()" class="left">Salvar nova sala</button>
+        <button (click)="submit()" class="left">Salvar locatário</button>
         <button class="right">Cancelar</button>
         
     </div>

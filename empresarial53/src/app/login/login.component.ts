@@ -28,7 +28,7 @@ export class LoginComponent {
   }
 
   public alert(): void {
-    window.alert("Favor, enviar um e-mail para 'amaro.adonis@gmail.com', informando seu nome completo e e-mail utilizado no login.")
+    window.alert("Favor, enviar um e-mail para 'empresarial53@gmail.com', informando seu nome completo e e-mail utilizado no login.")
   }
 
 }

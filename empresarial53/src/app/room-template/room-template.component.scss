@@ -4,7 +4,7 @@
         width: 100vw;
         .container{
             display: flex;
-            flex-direction: column;    
+            flex-direction: column;  
             margin-top: 30px;
             width: 700px;
             height: 100vh;
@@ -46,6 +46,7 @@
             .boxs{
                 display: flex;
                 flex-direction: row;
+                margin-left: 30px;
                 .box1{
                     width: 300px;        
                     .long-info{
@@ -70,53 +71,53 @@
                                 margin-bottom: 5px;
                             }
                         }
-                        .left-info{
-                            flex-direction: column;
-                            .title{
-                                margin: 0;
-                                font-weight: 500;
-                            }
-                            .answer{
-                                margin: 0;
-                                color: whitesmoke;
-                                text-align: left;
-                                margin-bottom: 5px;
-                            }
-                            .alertbox1{
-                                margin: 20px 0 0 0;
-                                font-weight: 500;
-                                text-align: center;
-                                background-color: cadetblue;
-                                border-radius: 7px;
-                            }
-                            .alertbox2{
-                                margin: 15px 0 0 0;
-                                font-weight: 500;
-                                text-align: center;
-                                background-color: darkolivegreen;
-                                border-radius: 7px;
-                                div{
-                                    flex-direction: row;
-                                }
-                            }
-                            .date{
-                                font-size: 18px;
-                                padding: 5px 0 5px 0;
-                                margin-bottom: 0;
-                                color: aliceblue;
-                            }
-                            .text{
-                                margin-bottom: 0;
-                                padding: 5px 0 5px 0;
-                            }
-                        }
                     }
                 }
                 .box2{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    margin-left: 50px;
+                
+                    width: 350px;
+                    .title{
+                        margin: 0;
+                        font-weight: 500;
+                    }
+                    .answer{
+                        margin: 0;
+                        color: whitesmoke;
+                        text-align: left;
+                        margin-bottom: 5px;
+                    }
+                    .alertbox1{
+                        margin: 20px 0 0 0;
+                        font-weight: 500;
+                        text-align: center;
+                        background-color: cadetblue;
+                        border-radius: 7px;
+                        width: 300px;
+                    }
+                    .alertbox2{
+                        margin: 15px 0 0 0;
+                        font-weight: 500;
+                        text-align: center;
+                        background-color: darkolivegreen;
+                        border-radius: 7px;
+                        width: 300px;
+                        div{
+                            flex-direction: row;
+                        }
+                    }
+                    .date{
+                        font-size: 18px;
+                        padding: 5px 0 5px 0;
+                        margin-bottom: 0;
+                        color: aliceblue;
+                    }
+                    .text{
+                        margin-bottom: 0;
+                        padding: 5px 0 5px 0;
+                    }
                     .calendar-pay-status{
                         flex-direction: column;
                         text-align: center;
@@ -145,80 +146,94 @@
                             }
                         }
                     }
-                    .last-repairs{
-                        flex-direction: column;
-                        text-align: center;
-                        align-self: center;
-                        margin-top: 30px;
-                        .title{
-                            font-size: 15px;
-                            font-weight: 500;
-                            margin: 10px 0 0 0;
-                        }
-                        table{
-                            width: 350px;
-                            border: solid black 1px;
-                            text-align: center;
-                            justify-content: center;
-                            align-items: center;
-                            align-content: center;
-                            tr{
-                                border: solid black 1px;
-                                height: 40px;
-                                th{
-                                    border: solid black 1px;
-                                }
-                                td{
-                                    border: solid black 1px;
-                                    font-size: 16px;
-                                }
-                                .first-row{
-                                    text-align: left;
-                                }
-                            } 
-                        }
-                        .link{
-                            margin: 0;
-                            text-align: right;
-                            a{
-                                font-size: 13px;
-                            }
-                        }
-                    }
-                    .buttons{
-                        margin: 30px 0 10px 0;
-                        align-self: center;
-                        .pay-info{
-                            background-color: darkgreen;
-                            color: white;
-                            border: none;
-                            border-radius: 10px;
-                            height: 35px;
-                            width: 180px;
-                            font-weight: 600;
-                        }
-                        .contact{
-                            background-color: darkcyan;
-                            color: white;
-                            border: none;
-                            border-radius: 10px;
-                            margin-left: 10px;
-                            height: 35px;
-                            width: 160px;
-                            font-weight: 600;
-                        }
-                    }
-                    .clean-room{
-                        margin-top: 10px;
-                        text-align: center;
+                    
+                }
+            }
+            .box3{
+                display: flex;
+                flex-direction: column;
+                .last-repairs{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    align-self: center;
+                    margin-top: 30px;
+                    .title{
                         font-size: 15px;
-                        background-color: rgb(223, 206, 206);
-                        width: 120px;
-                        border-radius: 7px;
-                        align-self: center;
+                        font-weight: 500;
+                        margin: 10px 0 0 0;
+                    }
+                    table{
+                        width: 700px;
+                        border: solid black 1px;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        align-content: center;
+                        tr{
+                            border: solid black 1px;
+                            height: 40px;
+                            th{
+                                border: solid black 1px;
+                            }
+                            td{
+                                border: solid black 1px;
+                                font-size: 16px;
+                            }
+                            .first-row{
+                                text-align: left;
+                            }
+                        } 
+                    }
+                    .link{
+                        margin: 0;
+                        text-align: right;
                         a{
-                            color: red;
+                            font-size: 13px;
                         }
+                    }
+                }
+                .buttons{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 10px 0 10px 0;
+                    .pay-info{
+                        background-color: darkgreen;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        height: 35px;
+                        width: 180px;
+                        font-weight: 600;
+                    }
+                    .contact{
+                        display: flex;
+                        text-decoration: none;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: darkcyan;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        margin-left: 10px;
+                        padding: 9px;
+                        height: 35px;
+                        width: 160px;
+                        font-weight: 600;
+                    }
+                }
+                .clean-room{
+                    margin-top: 10px;
+                    text-align: center;
+                    font-size: 15px;
+                    background-color: rgb(223, 206, 206);
+                    width: 120px;
+                    border-radius: 7px;
+                    align-self: center;
+                    a{
+                        color: red;
                     }
                 }
             }
@@ -268,14 +283,17 @@
                 }
             }
             .boxs{
+                display: flex;
                 .box1{
+                    height: 360px;
                     .long-info{
                         font-size: 13px;
                         display: flex;
                         flex-direction: row;
-                        width: 320px;
+                        width: 160px;
                         margin-top: 10px;
                         align-self: center;
+                        height: 360px;
                         .right-info{
                             flex-direction: column;
                             width: 150px;
@@ -289,9 +307,14 @@
                                 text-align: right;
                                 margin-bottom: 5px;
                             }
-                        }
-                        .left-info{
-                            width: 150px;
+                        }    
+                    }
+                }
+                .box2{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 150px;
                             margin-left: 20px;
                             flex-direction: column;
                             .title{
@@ -310,13 +333,17 @@
                                 text-align: center;
                                 background-color: cadetblue;
                                 border-radius: 7px;
+                                font-size: 13px;
+                                width: 150px;
                             }
                             .alertbox2{
-                                margin: 15px 0 0 0;
+                                margin: 15px 0 100px 0;
                                 font-weight: 500;
                                 text-align: center;
                                 background-color: darkolivegreen;
                                 border-radius: 7px;
+                                font-size: 13px;
+                                width: 150px;
                                 div{
                                     flex-direction: row;
                                 }
@@ -331,13 +358,6 @@
                                 margin-bottom: 0;
                                 padding: 5px 0 5px 0;
                             }
-                        }
-                    }
-                }
-                .box2{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
                     .calendar-pay-status{
                         flex-direction: column;
                         text-align: center;
@@ -365,82 +385,95 @@
                             }
                         }
                     }
-                    .last-repairs{
-                        flex-direction: column;
+                   
+                }
+            }
+            .box3{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .last-repairs{
+                    flex-direction: column;
+                    text-align: center;
+                    align-self: center;
+                    .title{
+                        font-size: 15px;
+                        font-weight: 500;
+                        margin: 10px 0 0 0;
+                    }
+                    table{
+                        width: 320px;
+                        border: solid black 1px;
                         text-align: center;
-                        align-self: center;
-                        .title{
-                            font-size: 15px;
-                            font-weight: 500;
-                            margin: 10px 0 0 0;
-                        }
-                        table{
-                            width: 320px;
+                        justify-content: center;
+                        align-items: center;
+                        align-content: center;
+                        tr{
                             border: solid black 1px;
-                            text-align: center;
-                            justify-content: center;
-                            align-items: center;
-                            align-content: center;
-                            tr{
+                            height: 30px;
+                            th{
                                 border: solid black 1px;
-                                height: 30px;
-                                th{
-                                    border: solid black 1px;
-                                }
-                                td{
-                                    border: solid black 1px;
-                                    font-size: 13px;
-                                }
-                                .first-row{
-                                    text-align: left;
-                                }
-                            } 
-                        }
-                        .link{
-                            margin: 0;
-                            text-align: right;
-                            a{
+                            }
+                            td{
+                                border: solid black 1px;
                                 font-size: 13px;
                             }
-                        }
+                            .first-row{
+                                text-align: left;
+                            }
+                        } 
                     }
-                    .buttons{
-                        margin: 10px 0 10px 0;
-                        align-self: center;
-                        .pay-info{
-                            background-color: darkgreen;
-                            color: white;
-                            border: none;
-                            border-radius: 10px;
-                            height: 35px;
-                            width: 165px;
-                            font-weight: 600;
-                        }
-                        .contact{
-                            background-color: darkcyan;
-                            color: white;
-                            border: none;
-                            border-radius: 10px;
-                            margin-left: 10px;
-                            height: 35px;
-                            width: 145px;
-                            font-weight: 600;
-                        }
-                    }
-                    .clean-room{
-                        margin-top: 10px;
-                        text-align: center;
-                        font-size: 15px;
-                        background-color: rgb(223, 206, 206);
-                        width: 120px;
-                        border-radius: 7px;
-               
+                    .link{
+                        margin: 0;
+                        text-align: right;
                         a{
-                            color: red;
+                            font-size: 13px;
                         }
                     }
                 }
-
+                .buttons{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 10px 0 10px 0;
+                    .pay-info{
+                        background-color: darkgreen;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        height: 35px;
+                        width: 165px;
+                        font-weight: 600;
+                    }
+                    .contact{
+                        background-color: darkcyan;
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        margin-left: 5px;
+                        padding: 6.5px;
+                        width: 150px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        
+                        
+                        
+                    }
+                }
+                .clean-room{
+                    margin-top: 10px;
+                    text-align: center;
+                    font-size: 15px;
+                    background-color: rgb(223, 206, 206);
+                    width: 120px;
+                    border-radius: 7px;
+           
+                    a{
+                        color: red;
+                    }
+                }
             }
             
             

@@ -35,7 +35,7 @@ export class RoomTemplateComponent implements OnInit {
   }
 
   public getRepairs(numeroSala:string | null):void {
-    this.http.get<Repair[]>(`api/manutencao/manutencoes/${numeroSala}`)
+    this.http.get<Repair[]>(`api/manutencao/2manutencoes/${numeroSala}`)
     .subscribe(response => this.onLoadRepairs(response))
   }
 

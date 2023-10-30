@@ -1,7 +1,7 @@
 export interface Tenant {
     numeroSala:number,
     nome:string,
-    cpfCnpj:number,
+    cpfCnpj:string,
     inicioContrato: string,
     fimContrato: string,
     valorContrato:number,
@@ -10,7 +10,8 @@ export interface Tenant {
     email:string,
     telefone:string,
     whatsapp:string
-    numeroContrato:string
+    numeroContrato:string,
+    active:boolean
 }
 
 export interface Repair {

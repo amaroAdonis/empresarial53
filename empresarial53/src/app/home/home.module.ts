@@ -5,11 +5,13 @@ import { HomeRoutingModule } from "./home-routing.module";
 import { HeaderTemplateModule } from "../header-template/header-template.module";
 import { RouterModule } from "@angular/router";
 import { DropdownModule } from "../dropdown/dropdown.module";
+import { RoomButtonComponent } from "./room-button/room-button.component";
 
 
 @NgModule({
     declarations: [
         HomeComponent,
+        RoomButtonComponent
     ],
     imports: [
         CommonModule,

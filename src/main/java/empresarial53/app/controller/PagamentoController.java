@@ -19,7 +19,7 @@ public class PagamentoController {
         return pagamentoDao.findAll();
     }
 
-    @GetMapping(value = "/{order}")
+    @GetMapping(value = "/all/{order}")
     public Pagamento getByOrder(@PathVariable Integer order) {
         return pagamentoDao.findByOrderNum(order);
     }

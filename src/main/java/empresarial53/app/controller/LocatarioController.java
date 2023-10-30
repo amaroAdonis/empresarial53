@@ -24,6 +24,11 @@ public class LocatarioController {
         return locatarioDao.findByNumeroSala(numeroSala);
     }
 
+    @GetMapping(value = "/all/{cpfCnpj}")
+    public Locatario getByCpfCnpj(@PathVariable String cpfCnpj) {
+        return locatarioDao.findByCpfCnpj(cpfCnpj);
+    }
+
     @PostMapping
     public void CreateLocatario(@RequestBody Locatario locatario) {
         locatarioDao.novoLocatario(locatario);
@@ -35,7 +40,7 @@ public class LocatarioController {
     }
 
     @PutMapping("/{cpfCnpj}")
-    public void update(@PathVariable Integer cpfCnpj, @RequestBody Locatario locatario) {
+    public void update(@PathVariable String cpfCnpj, @RequestBody Locatario locatario) {
         locatarioDao.update(locatario);
     }
 }

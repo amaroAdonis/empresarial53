@@ -15,11 +15,12 @@ public class Locatario {
     private String atividade;
     private Double valorContrato;
     private String numeroContrato;
+    private Boolean active;
 
     public Locatario() {
     }
 
-    public Locatario(Integer numeroSala, String nome, String cpfCnpj, Date inicioContrato, Date fimContrato, Integer diaVencimento, String email, String telefone, String whatsapp, String atividade, Double valorContrato, String numeroContrato) {
+    public Locatario(Integer numeroSala, String nome, String cpfCnpj, Date inicioContrato, Date fimContrato, Integer diaVencimento, String email, String telefone, String whatsapp, String atividade, Double valorContrato, String numeroContrato, Boolean active) {
         this.numeroSala = numeroSala;
         this.nome = nome;
         this.cpfCnpj = cpfCnpj;
@@ -32,6 +33,7 @@ public class Locatario {
         this.atividade = atividade;
         this.valorContrato = valorContrato;
         this.numeroContrato = numeroContrato;
+        this.active = active;
     }
 
     public Integer getNumeroSala() {
@@ -128,6 +130,14 @@ public class Locatario {
 
     public void setNumeroContrato(String numeroContrato) {
         this.numeroContrato = numeroContrato;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 }
 

@@ -42,7 +42,8 @@ export class TenantComponent implements OnInit {
     email: new FormControl(null, [Validators.required]),
     telefone: new FormControl(null, [Validators.required]),
     whatsapp: new FormControl(null, [Validators.required]),
-    numeroContrato: new FormControl(null, [Validators.required])
+    numeroContrato: new FormControl(null, [Validators.required]),
+    active: new FormControl(null, [Validators.required])
   })
 
   public submit():void {

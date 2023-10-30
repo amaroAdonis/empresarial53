@@ -30,6 +30,7 @@ public class LocatarioDao {
         locatario.setTelefone(rs.getString("telefone"));
         locatario.setWhatsapp(rs.getString("whatsapp"));
         locatario.setAtividade(rs.getString("atividade"));
+        locatario.setActive(rs.getBoolean("active"));
 
         return locatario;
     }
@@ -45,8 +46,8 @@ public class LocatarioDao {
     }
 
     public void novoLocatario (Locatario locatario) {
-        String sql = "INSERT INTO locatario(numero_sala, nome, cpf_cnpj, inicio_contrato, fim_contrato, dia_vencimento, valor_contrato, numero_contrato, email, telefone, whatsapp, atividade) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        jdbcTemplate.update(sql, locatario.getNumeroSala(), locatario.getNome(), locatario.getCpfCnpj(), locatario.getInicioContrato(), locatario.getFimContrato(), locatario.getDiaVencimento(), locatario.getValorContrato(), locatario.getNumeroContrato(), locatario.getEmail(), locatario.getTelefone(), locatario.getWhatsapp(), locatario.getAtividade());
+        String sql = "INSERT INTO locatario(numero_sala, nome, cpf_cnpj, inicio_contrato, fim_contrato, dia_vencimento, valor_contrato, numero_contrato, email, telefone, whatsapp, atividade, active) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, locatario.getNumeroSala(), locatario.getNome(), locatario.getCpfCnpj(), locatario.getInicioContrato(), locatario.getFimContrato(), locatario.getDiaVencimento(), locatario.getValorContrato(), locatario.getNumeroContrato(), locatario.getEmail(), locatario.getTelefone(), locatario.getWhatsapp(), locatario.getAtividade(), locatario.getActive());
     }
 
     public List<Locatario> findAll() {
@@ -70,7 +71,7 @@ public class LocatarioDao {
     }
 
     public void update(Locatario locatario) {
-        String sql = "UPDATE locatario SET numero_sala = ?, nome = ?, inicio_contrato = ?, fim_contrato = ?, dia_vencimento = ?, valor_contrato = ?, numero_contrato = ?, email = ?, telefone = ?, whatsapp = ?, atividade = ? WHERE cpf_cnpj = ?";
-        jdbcTemplate.update(sql, locatario.getNome(), locatario.getInicioContrato(), locatario.getFimContrato(), locatario.getDiaVencimento(), locatario.getValorContrato(), locatario.getNumeroContrato(), locatario.getEmail(), locatario.getTelefone(), locatario.getWhatsapp(), locatario.getAtividade(), locatario.getAtividade());
+        String sql = "UPDATE locatario SET numero_sala = ?, nome = ?, inicio_contrato = ?, fim_contrato = ?, dia_vencimento = ?, valor_contrato = ?, numero_contrato = ?, email = ?, telefone = ?, whatsapp = ?, atividade = ?, active = ? WHERE cpf_cnpj = ?";
+        jdbcTemplate.update(sql, locatario.getNome(), locatario.getInicioContrato(), locatario.getFimContrato(), locatario.getDiaVencimento(), locatario.getValorContrato(), locatario.getNumeroContrato(), locatario.getEmail(), locatario.getTelefone(), locatario.getWhatsapp(), locatario.getAtividade(), locatario.getAtividade(), locatario.getActive());
     }
 }
