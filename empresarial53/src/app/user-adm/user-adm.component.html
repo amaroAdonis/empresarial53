@@ -1,0 +1,28 @@
+<div [formGroup]="form" class="container">
+    <div class="dropdown">
+        <dropdown-basic></dropdown-basic>
+    </div>
+
+    <div class="title">
+        <p>{{title}}</p>
+    </div>
+
+    <div class="inputs">
+        <div class="name-input">
+            <label class="label">Nome</label>
+            <input formControlName="username" type="text" class="username" placeholder="nome">
+        </div>
+        <div class="email-input">
+            <label class="label">Email</label>
+            <input formControlName="email" type="text" class="email" placeholder="email@email.com">
+        </div>
+    </div>
+    <div class="buttons">
+        <div class="adicionar">
+            <a (click)="submit()">Adicionar</a>
+        </div>
+        <div class="cancelar">
+            <a class="cancelar" onclick="location.href='/empresarial53'">Cancelar</a>
+        </div>
+    </div>
+</div>

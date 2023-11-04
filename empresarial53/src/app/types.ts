@@ -30,5 +30,10 @@ export interface Payment {
     valor:number,
     observacao:string,
     formaPagamento:string
+}
 
+export interface User {
+    username: string,
+    email: string,
+    orderNum:number
 }

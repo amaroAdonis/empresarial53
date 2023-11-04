@@ -26,12 +26,14 @@ public class AppSecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity httpSecurity, AppUserDetailsService userDetailsService, SecurityContextRepository securityContextRepository) throws Exception {
+    public SecurityFilterChain filterChain(HttpSecurity httpSecurity,
+                                           AppUserDetailsService userDetailsService,
+                                           SecurityContextRepository securityContextRepository) throws Exception {
         httpSecurity.authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("").permitAll()
                         .anyRequest().permitAll()
         )
-                .userDetailsService((UserDetailsService) userDetailsService)
+                .userDetailsService(userDetailsService)
                 .securityContext(s -> s.securityContextRepository(
                         new DelegatingSecurityContextRepository(securityContextRepository)
                 )).csrf(c -> c.disable());

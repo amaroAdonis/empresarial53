@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.sql.SQLException;
+
 @RestController
 @RequestMapping("/userprofile")
 public class UserProfileController {
@@ -20,7 +22,7 @@ public class UserProfileController {
     UserProfileService userProfileService;
 
     @GetMapping("")
-    public UserProfile getUserProfile(HttpServletRequest httpServletRequest) {
+    public UserProfile getUserProfile(HttpServletRequest httpServletRequest) throws SQLException {
         var user = httpServletRequest.getUserPrincipal();
         var userEmail = user.getName();
         return userProfileService.getUserProfile(userEmail);

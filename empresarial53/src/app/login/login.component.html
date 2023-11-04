@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [formGroup]="form">
     <div class="title">
         <h2>Faça seu login</h2>
     </div>
@@ -9,8 +9,12 @@
         <input formControlName="senha" type="password" class="senha" placeholder="Senha">
     </div>
     <div class="buttons">
-        <button onclick="login()" class="left">Confirmar</button>
-        <button onclick="location.href='/'" class="right">Cancelar</button>
+        <div class="adicionar">
+            <a onclick="submit()">Confirmar</a>
+        </div>
+        <div class="cancelar">
+            <a class="cancelar" href="/home">Cancelar</a>
+        </div>
     </div>
     <div class="link">
         <a (click)="alert()" href="#">Esqueceu a senha?</a>

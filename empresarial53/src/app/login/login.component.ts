@@ -21,7 +21,7 @@ export class LoginComponent {
     const {email, password} = this.form.value;
     this.httpClient.post<any>('/api/login', {email, password})
     .subscribe( () => {
-      this.router.navigateByUrl('/ home')
+      this.router.navigateByUrl('/home')
     }
 
     )  

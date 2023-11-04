@@ -4,9 +4,11 @@
         .container{
             display: flex;
             flex-direction: column;
+            align-items: center;
             height: 100vh;
             padding: 0;
             margin: 0;
+            
             .dropdown{
                 margin-bottom: 20px;
                 margin-top: 20px;
@@ -19,7 +21,24 @@
                 padding: 20px 0 20px 0;   
                 font-size: x-large;
             }
+            .search-bar{
+                margin-bottom: 20px;
+                height: 50px;
+                width: 720px;
+                form{
+                    .mb-3.row{
+                        display: flex;
+                        flex-direction: column;
+                        .col-xs-3.col-sm-auto{
+                            input{
+                                width: 200px;
+                            }
+                        }
+                    }
+                }
+            }
             .table{
+                margin: 20px 0 20px 0;
                 width: 720px;
                 justify-content: center;
                 align-self:center;
@@ -62,6 +81,7 @@
             display: flex;
             flex-direction: column;
             align-self: center;
+            align-items: center;
             height: 100vh;
             padding: 0;
             margin: 0;
@@ -76,8 +96,28 @@
                 text-align: center;
                 padding: 20px 0 20px 0;   
             }
+            .search-bar{
+                margin-bottom: 20px;
+                height: 50px;
+                width: 360px;
+                form{
+                    .mb-3.row{
+                        display: flex;
+                        flex-direction: column;
+                        .col-xs-3.col-sm-auto{
+                            input{
+                                width: 200px;
+                            }
+                        }
+                        label{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
             .table{
-                width: fit-content;
+                margin-top: 20px;
+                width: 360px;
                 justify-content: center;
                 align-self:center;
                 thead{

@@ -21,9 +21,9 @@ public class UserController {
         return userDao.findAll();
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/{email}")
     public User getByEmail(@PathVariable String email) throws SQLException {
-        return userDao.findByEmail(email);
+        return userDao.getUserByEmail(email);
     }
 
     @PostMapping("")

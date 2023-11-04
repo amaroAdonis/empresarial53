@@ -58,6 +58,10 @@ const routes: Routes = [
       {
         path:"lista-manutencoes",
         loadChildren: () => import("./repairs-list/repairs-list.module").then(m => m.RepairsListModule)
+      },
+      {
+        path: "adm",
+        loadChildren: () => import("./user-adm/user-adm.module").then(m => m.UserAdmModule)
       }
     ]
 

@@ -17,26 +17,21 @@ public class UserDao {
 
     private User getUserFromResultSet(ResultSet resultSet, int rowNum) throws SQLException {
             User user = new User();
-            user.setUserName(resultSet.getString("username"));
+            user.setUsername(resultSet.getString("username"));
             user.setEmail(resultSet.getString("email"));
-            user.setOrder(resultSet.getInt("order"));
+            user.setOrder(resultSet.getInt("orderNum"));
 
             return user;
     }
 
     public void newUser(User user) {
-        String sql = "INSERT INTO user_admin(username, email) values(?, ?, ?)";
-        jdbcTemplate.update(sql, user.getUserName(), user.getEmail());
+        String sql = "INSERT INTO user_admin(username, email, orderNum) values(?, ?, ?)";
+        jdbcTemplate.update(sql, user.getUsername(), user.getEmail(), user.getOrder());
     }
 
     public List<User> findAll() {
         String sql = "SELECT * FROM user_admin";
         return jdbcTemplate.query(sql, this::getUserFromResultSet);
-    }
-
-    public User findByEmail(String email) throws SQLException {
-        String sql = "SELECT * FROM user_admin WHERE email = ?";
-        return jdbcTemplate.queryForObject(sql, this::getUserFromResultSet, email);
     }
 
     public void deleteByOrder(Integer order) {
@@ -46,10 +41,10 @@ public class UserDao {
 
     public void update(User user) {
         String sql = "UPDATE user_admin SET username = ?, password = ? WHERE orderNum = ?";
-        jdbcTemplate.update(sql, user.getUserName(), user.getOrder());
+        jdbcTemplate.update(sql, user.getUsername(), user.getOrder());
     }
 
-    public User getUserByEmail(String email) {
+    public User getUserByEmail(String email) throws  SQLException {
         String sql = "SELECT * FROM user_admin WHERE email = ?";
         return jdbcTemplate.queryForObject(sql, this::getUserFromResultSet, email);
     }

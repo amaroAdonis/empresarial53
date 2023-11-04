@@ -3,14 +3,16 @@
         <dropdown-basic></dropdown-basic>
     </div>
     <div class="title">Lista de Manutenções</div>
-    <form>
-        <div class="mb-3 row">
-            <label for="table-filtering-search" class="col-xs-3 col-sm-auto col-form-label">Busca</label>
-            <div class="col-xs-3 col-sm-auto">
-                <input id="table-filtering-search" class="form-control" type="text" [formControl]="filter" />
+    <div class="search-bar">
+        <form>
+            <div class="mb-3 row">
+                <label for="table-filtering-search" class="col-xs-3 col-sm-auto col-form-label">Busca</label>
+                <div class="col-xs-3 col-sm-auto">
+                    <input id="table-filtering-search" class="form-control" type="text" [formControl]="filter" />
+                </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
     <div class="table table-striped">
         <thead>
             <tr>

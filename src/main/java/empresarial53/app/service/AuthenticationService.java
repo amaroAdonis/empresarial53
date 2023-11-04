@@ -33,6 +33,6 @@ public class AuthenticationService implements AuthenticationManager {
         }
 
 
-        throw new InvalidAuthenticationException("e-mail ou usuários incorretos!");
+        throw new InvalidAuthenticationException("e-mail ou senha incorretos!");
     }
 }
