@@ -2,6 +2,7 @@ package empresarial53.app.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController()
 @RequestMapping
+@RequiredArgsConstructor
 public class LoginController {
 
     private final SecurityContextHolderStrategy securityContextHolderStrategy = SecurityContextHolder
@@ -28,7 +30,10 @@ public class LoginController {
 
     private AuthenticationProvider authenticationProvider;
 
+
     public record LoginRequest(String email, String password) {}
+
+
 
     @Autowired
     public LoginController(AuthenticationProvider authenticationProvider,
@@ -37,7 +42,7 @@ public class LoginController {
         this.authenticationProvider = authenticationProvider;
     }
 
-    @PostMapping("api/login")
+    @PostMapping("/api/login")
     public void login(@RequestBody LoginRequest loginRequest, HttpServletRequest request, HttpServletResponse response){
         var token = UsernamePasswordAuthenticationToken.unauthenticated(loginRequest.email, loginRequest.password);
         var authentication = authenticationProvider.authenticate(token);

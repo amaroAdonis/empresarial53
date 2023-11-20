@@ -6,11 +6,11 @@
         <label class="label">E-mail</label>
         <input formControlName="email" type="text" class="name" placeholder="E-mail">
         <label class="label">Senha</label>
-        <input formControlName="senha" type="password" class="senha" placeholder="Senha">
+        <input formControlName="password" type="password" class="senha" placeholder="Senha">
     </div>
     <div class="buttons">
         <div class="adicionar">
-            <a onclick="submit()">Confirmar</a>
+            <a (click)="login()">Confirmar</a>
         </div>
         <div class="cancelar">
             <a class="cancelar" href="/home">Cancelar</a>

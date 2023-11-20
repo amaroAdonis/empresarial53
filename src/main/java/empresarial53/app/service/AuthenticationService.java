@@ -1,3 +1,4 @@
+
 package empresarial53.app.service;
 
 import empresarial53.app.exceptions.InvalidAuthenticationException;
@@ -31,8 +32,6 @@ public class AuthenticationService implements AuthenticationManager {
         if (encoder.matches(password, encodedPassStored)) {
             return authentication;
         }
-
-
         throw new InvalidAuthenticationException("e-mail ou senha incorretos!");
     }
 }
